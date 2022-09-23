@@ -1,25 +1,36 @@
 # Changelog
+
 All notable changes to this project will be documented in this file.
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
+
+## [1.1.9] - 2022-09-23
+
 ### Added
+
 - created hugo module of theme
 - created v2 mod
 
 ## [1.1.8] - 2022-09-23
+
 ### Fixed
+
 - changed every instance of eccentrist to tome for new theme name
 
 ## [1.1.1] - 2022-09-23
+
 ### Added
+
 - some feature
 
 ### Fixed
+
 - release.sh
 
-[Unreleased]: https://github.com/MrGlitchByte/eccentrist/compare/v1.1.8...HEAD
+[unreleased]: https://github.com/MrGlitchByte/eccentrist/compare/v1.1.9...HEAD
+[1.1.9]: https://github.com/MrGlitchByte/eccentrist/compare/v1.1.8...v1.1.9
 [1.1.8]: https://github.com/MrGlitchByte/eccentrist/compare/v1.1.1...v1.1.8
 [1.1.1]: https://github.com/MrGlitchByte/tome/releases/tag/v1.1.1
