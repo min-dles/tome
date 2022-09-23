@@ -7,6 +7,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [Unreleased]
 ### Added
 - created hugo module of theme
+- created v2 mod
 
 ## [1.1.8] - 2022-09-23
 ### Fixed
