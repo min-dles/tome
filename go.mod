@@ -1,3 +1,3 @@
-module github.com/MrGlitchByte/eccentrist/v1
+module github.com/MrGlitchByte/eccentrist
 
 go 1.18
