@@ -57,7 +57,7 @@ if [ $branch = "main" ]; then
 		echo "Eccentrist v$version successfully released! 🎉"
 		echo "Returning to dev branch..."
 
-		git checkout dev
+		git checkout main
 
 	else	
 		echo "ERROR: There are unstaged changes in development!"
