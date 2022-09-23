@@ -2,8 +2,8 @@ module.exports = {
   content: [
     "./layouts/**/*.html",
     "./content/**/*.{html,md}",
-    "./themes/congo/layouts/**/*.html",
-    "./themes/congo/content/**/*.{html,md}",
+    "./themes/eccentrist/layouts/**/*.html",
+    "./themes/eccentrist/content/**/*.{html,md}",
   ],
   darkMode: "class",
   theme: {
