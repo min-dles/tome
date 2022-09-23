@@ -18,11 +18,11 @@ if [ $branch = "dev" ]; then
 		echo "Enter the release version (eg. 1.2.0):"
 		read version
 
-		echo "Started releasing Eccentrist v$version..."
+		echo "Started releasing tome v$version..."
 
 		# update package version
 		jq --arg version "$version" '.version=$version' package.json > package.tmp && mv package.tmp package.json
-		sed -i "" -e "1s/^\(\/\*! Eccentrist \)v[0-9]\{1,\}\.[0-9]\{1,\}\.[0-9]\{1,\}/\1v$version/" assets/css/main.css
+		sed -i "" -e "1s/^\(\/\*! tome \)v[0-9]\{1,\}\.[0-9]\{1,\}\.[0-9]\{1,\}/\1v$version/" assets/css/main.css
 
 		# update changelog
 		chan release $version || exit
@@ -54,7 +54,7 @@ if [ $branch = "dev" ]; then
 		# publish GitHub release
 		chan gh-release $version
 
-		echo "Eccentrist v$version successfully released! 🎉"
+		echo "tome v$version successfully released! 🎉"
 		echo "Returning to dev branch..."
 
 		git checkout dev

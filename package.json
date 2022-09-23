@@ -1,19 +1,19 @@
 {
-  "name": "hugo-eccentrist-theme",
+  "name": "hugo-tome-theme",
   "version": "1.1.7",
-  "description": "eccentrist theme for Hugo",
+  "description": "Tome theme for Hugo",
   "scripts": {
     "preinstall": "rimraf assets/vendor",
     "postinstall": "vendor-copy",
     "assets": "rimraf assets/vendor && vendor-copy",
     "dev": "NODE_ENV=development ./node_modules/tailwindcss/lib/cli.js -i ./assets/css/main.css -o ./assets/css/compiled/main.css --jit -w",
     "build": "NODE_ENV=production ./node_modules/tailwindcss/lib/cli.js -i ./assets/css/main.css -o ./assets/css/compiled/main.css --jit",
-    "example": "hugo server --source exampleSite --themesDir ../.. --buildDrafts -b http://localhost/eccentrist/ -p 8008",
+    "example": "hugo server --source exampleSite --themesDir ../.. --buildDrafts -b http://localhost/tome/ -p 8008",
     "lighthouse": "lhci autorun"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/MrGlitchbyte/eccentrist"
+    "url": "https://github.com/MrGlitchbyte/tome"
   },
   "keywords": [
     "hugo",
@@ -25,9 +25,9 @@
   "funding": "https://github.com/sponsors/mrglitchbyte",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/mrglitchbyte/eccentrist/issues"
+    "url": "https://github.com/mrglitchbyte/tome/issues"
   },
-  "homepage": "https://github.com/mrglitchbyte/eccentrist#readme",
+  "homepage": "https://github.com/mrglitchbyte/tome#readme",
   "devDependencies": {
     "@tailwindcss/typography": "^0.5.7",
     "chart.js": "^3.9.1",
