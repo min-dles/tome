@@ -35,7 +35,7 @@ if [ $branch = "dev" ]; then
 		git commit -a -m "🔨 Preparing release v$version"
 		git push
 
-		# switch to stable branch
+		# switch to main branch
 		git checkout main
 
 		# pull latest from stable
