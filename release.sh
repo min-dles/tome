@@ -52,7 +52,7 @@ if [ $branch = "dev" ]; then
 		git push --tags
 
 		# publish GitHub release
-		timeout 2 chan gh-release $version
+		timeout 3 chan gh-release $version
 
 		echo "Eccentrist v$version successfully released! 🎉"
 		echo "Returning to dev branch..."
