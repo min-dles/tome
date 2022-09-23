@@ -1,16 +1,16 @@
-# Congo theme for Hugo
+# Eccentrist theme for Hugo
 
-name = "congo"
+name = "Eccentrist"
 license = "MIT"
-licenselink = "https://github.com/jpanther/congo/blob/master/LICENSE"
-description = "A powerful, lightweight theme for Hugo built with Tailwind CSS."
+licenselink = "https://github.com/MrGlitchByte/eccentrist/blob/master/LICENSE"
+description = "A powerful, lightweight Tuffte CSS theme for Hugo built with Tailwind CSS."
 
-homepage = "https://github.com/jpanther/congo/"
-demosite = "https://jpanther.github.io/congo/"
+homepage = "https://github.com/MrGlitchByte/eccentrist/"
+demosite = "https://MrGlitchByte.github.io/Eccentrist/"
 
 tags = ["blog", "minimal", "responsive", "dark mode", "dark", "light", "tailwind", "personal"]
 features = ["syntax higlighting", "dark mode", "emoji"]
 
 [author]
-  name = "James Panther"
-  homepage = "https://jamespanther.com/"
+  name = "Mr Glitchbyte"
+  homepage = "https://glitchbyte.io"
