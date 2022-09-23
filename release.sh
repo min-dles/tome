@@ -25,8 +25,8 @@ if [ $branch = "main" ]; then
 		sed -i "" -e "1s/^\(\/\*! Eccentrist \)v[0-9]\{1,\}\.[0-9]\{1,\}\.[0-9]\{1,\}/\1v$version/" assets/css/main.css
 
 		# update changelog
-		update-changelog $version || exit
-		npx prettier --write CHANGELOG.md
+		#update-changelog $version || exit
+		#npx prettier --write CHANGELOG.md
 
 		# build project
 		npm run build
