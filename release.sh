@@ -10,7 +10,7 @@ git push
 npm run build
 
 # branch validation
-if [ $branch = "main" ]; then
+if [ $branch = "dev" ]; then
 	# check current branch is clean
 	if output=$(git status --porcelain) && [ -z "$output" ]; then
 		
@@ -36,7 +36,7 @@ if [ $branch = "main" ]; then
 		git push
 
 		# switch to stable branch
-		git checkout stable
+		git checkout main
 
 		# pull latest from stable
 		git pull
@@ -57,7 +57,7 @@ if [ $branch = "main" ]; then
 		echo "Eccentrist v$version successfully released! 🎉"
 		echo "Returning to dev branch..."
 
-		git checkout main
+		git checkout dev
 
 	else	
 		echo "ERROR: There are unstaged changes in development!"
