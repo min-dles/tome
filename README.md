@@ -1,13 +1,13 @@
-# Eccentrist
+# Tome
 
-Eccentrist is designed to be a powerful, lightweight theme for [Hugo](https://gohugo.io). It's built using Tailwind CSS with a clean and minimalist design that prioritises to your content.
+Tome is designed to be a powerful, lightweight theme for [Hugo](https://gohugo.io). It's built using Tailwind CSS with a clean and minimalist design that prioritises your content.
 
-🌏 [Demo site](https://MrGlitchByte.github.io/eccentrist/)  
-📑 [Theme documentation](https://MrGlitchByte.github.io/eccentrist/docs/)  
-🐛 [Bug reports & issues](https://github.com/MrGlitchByte/eccentrist/issues)  
-💡 [Questions & feature requests](https://github.com/MrGlitchByte/eccentrist/discussions)
+🌏 [Demo site](https://MrGlitchByte.github.io/tome/)  
+📑 [Theme documentation](https://MrGlitchByte.github.io/tome/docs/)  
+🐛 [Bug reports & issues](https://github.com/MrGlitchByte/tome/issues)  
+💡 [Questions & feature requests](https://github.com/MrGlitchByte/tome/discussions)
 
-![Screenshot](https://raw.githubusercontent.com/MrGlitchByte/eccentrist/stable/images/screenshot.png)
+![Screenshot](https://raw.githubusercontent.com/MrGlitchByte/tome/stable/images/screenshot.png)
 
 ## Features
 
@@ -38,15 +38,15 @@ Eccentrist is designed to be a powerful, lightweight theme for [Hugo](https://go
 
 ## Documentation
 
-Eccentrist has [extensive documentation](https://MrGlitchByte.github.io/eccentrist/docs/) that covers all aspects of the theme. Be sure to [read the docs](https://MrGlitchByte.github.io/eccentrist/docs/) to learn more about how to use the theme and its features.
+Tome has [extensive documentation](https://MrGlitchByte.github.io/tome/docs/) that covers all aspects of the theme. Be sure to [read the docs](https://MrGlitchByte.github.io/tome/docs/) to learn more about how to use the theme and its features.
 
 * * *
 
 ## Installation
 
-Eccentrist supports several installation methods - as a Hugo Module (easiest), a git submodule, or as a completely manual install.
+Tome supports several installation methods - as a Hugo Module (easiest), a git submodule, or as a completely manual install.
 
-Detailed instructions for each method can be found in the [Installation](https://MrGlitchByte.github.io/eccentrist/docs/installation) docs. You should consult the documentation for the simplest setup experience. Below is a quick start guide using Hugo modules if you're already confident installing Hugo themes.
+Detailed instructions for each method can be found in the [Installation](https://MrGlitchByte.github.io/tome/docs/installation) docs. You should consult the documentation for the simplest setup experience. Below is a quick start guide using Hugo modules if you're already confident installing Hugo themes.
 
 ### Quick start using Hugo
 
@@ -62,7 +62,7 @@ Detailed instructions for each method can be found in the [Installation](https:/
 
     ```toml
     [[imports]]
-    path = "github.com/MrGlitchByte/eccentrist/v2"
+    path = "github.com/MrGlitchByte/tome/v2"
     ```
 
 3.  Start your server using `hugo server` and the theme will be downloaded automatically.
@@ -71,26 +71,26 @@ Detailed instructions for each method can be found in the [Installation](https:/
 
     > **Note:** Do not overwrite the `module.toml` file you created above!
 
-    You will find these theme config files in the Hugo cache directory, or [download a copy](https://minhaskamal.github.io/DownGit/#/home?url=https://github.com/MrGlitchByte/eccentrist/tree/stable/config/_default) from GitHub.
+    You will find these theme config files in the Hugo cache directory, or [download a copy](https://minhaskamal.github.io/DownGit/#/home?url=https://github.com/MrGlitchByte/tome/tree/stable/config/_default) from GitHub.
 
-5.  Follow the [Getting Started](https://MrGlitchByte.github.io/eccentrist/docs/getting-started/) instructions to configure your website.
+5.  Follow the [Getting Started](https://MrGlitchByte.github.io/tome/docs/getting-started/) instructions to configure your website.
 
 ### Installing theme updates
 
 As new releases are posted, you can update the theme using Hugo. Simply run `hugo mod get -u` from your project directory and the theme will automatically update to the latest release.
 
-Detailed [update instructions](https://MrGlitchByte.github.io/eccentrist/docs/installation/#installing-updates) are available in the docs.
+Detailed [update instructions](https://MrGlitchByte.github.io/tome/docs/installation/#installing-updates) are available in the docs.
 
 * * *
 
 ## Contributing
 
-Eccentrist is expected to evolve over time. I intend to keep adding features and making changes as required.
+Tome is expected to evolve over time. I intend to keep adding features and making changes as required.
 
 Feel free to get in touch with any issues or suggestions for new features you'd like to see.
 
--   🐛 **Bug reports & issues:** Use [GitHub Issues](https://github.com/MrGlitchByte/eccentrist/issues)
--   💡 **Ideas for new features:** Open a discussion on [GitHub Discussions](https://github.com/MrGlitchByte/eccentrist/discussions)
--   🙋‍♀️ **General questions:** Head to [GitHub Discussions](https://github.com/MrGlitchByte/eccentrist/discussions)
+-   🐛 **Bug reports & issues:** Use [GitHub Issues](https://github.com/MrGlitchByte/tome/issues)
+-   💡 **Ideas for new features:** Open a discussion on [GitHub Discussions](https://github.com/MrGlitchByte/tome/discussions)
+-   🙋‍♀️ **General questions:** Head to [GitHub Discussions](https://github.com/MrGlitchByte/tome/discussions)
 
-If you're able to fix a bug or implement a new feature, I welcome PRs for this purpose. Learn more in the [contributing guidelines](https://github.com/MrGlitchByte/eccentrist/blob/dev/CONTRIBUTING.md).
+If you're able to fix a bug or implement a new feature, I welcome PRs for this purpose. Learn more in the [contributing guidelines](https://github.com/MrGlitchByte/tome/blob/dev/CONTRIBUTING.md).

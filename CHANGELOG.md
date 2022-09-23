@@ -7,6 +7,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [1.1.8] - 2022-09-23
+
+### Fixed
+
+- changed every instance of eccentrist to tome for new theme name
+
 ## [1.1.1] - 2022-09-23
 
 ### Added
@@ -17,5 +23,6 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - release.sh
 
-[unreleased]: https://github.com/MrGlitchByte/eccentrist/compare/v1.1.1...HEAD
-[1.1.1]: https://github.com/MrGlitchByte/eccentrist/releases/tag/v1.1.1
+[unreleased]: https://github.com/MrGlitchByte/eccentrist/compare/v1.1.8...HEAD
+[1.1.8]: https://github.com/MrGlitchByte/eccentrist/compare/v1.1.1...v1.1.8
+[1.1.1]: https://github.com/MrGlitchByte/tome/releases/tag/v1.1.1
