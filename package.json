@@ -1,6 +1,6 @@
 {
   "name": "hugo-eccentrist-theme",
-  "version": "1.1",
+  "version": "1.1.0",
   "description": "eccentrist theme for Hugo",
   "scripts": {
     "preinstall": "rimraf assets/vendor",
