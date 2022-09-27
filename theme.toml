@@ -1,16 +1,15 @@
-# tome theme for Hugo
+# theme.toml template for a Hugo theme
+# See https://github.com/gohugoio/hugoThemes#themetoml for an example
 
-name = "Tome"
+name = "hugo-tailwindcss-starter-theme"
 license = "MIT"
-licenselink = "https://github.com/MrGlitchByte/tome/blob/master/LICENSE"
-description = "A powerful, lightweight Tufte CSS theme for Hugo built with Tailwind CSS."
-
-homepage = "https://github.com/MrGlitchByte/tome/"
-#demosite = "https://MrGlitchByte.github.io/tome/"
-
-tags = ["blog", "minimal", "responsive", "dark mode", "dark", "light", "tailwind", "personal"]
-features = ["syntax higlighting", "dark mode", "emoji"]
+licenselink = "https://github.com/dirkolbrich/hugo-tailwindcss-starter-theme/blob/main/LICENSE"
+description = "A boilerplate starter theme using Tailwind CSS."
+homepage = "https://github.com/dirkolbrich/hugo-tailwindcss-starter-theme"
+tags = ["Hugo", "Tailwind CSS", "theme", "starter", "boilerplate"]
+features = []
+min_version = "0.69"
 
 [author]
-  name = "Mr Glitchbyte"
-  homepage = "https://glitchbyte.io"
+  name = "Dirk Olbrich"
+  homepage = "https://github.com/dirkolbrich/"

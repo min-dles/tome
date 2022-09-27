@@ -1,8 +1,6 @@
 {{ define "main" }}
-  {{ $partial := print "partials/home/" .Site.Params.homepage.layout ".html" }}
-  {{ if templates.Exists $partial }}
-    {{ partial $partial . }}
-  {{ else }}
-    {{ partial "partials/home/page.html" . }}
-  {{ end }}
+<article class="text-center text-gray-700">
+    <h1 class="font-serif font-extralight text-5xl welcome-headline">{{ .Title }}</h1>
+    {{ .Content }}
+</article>
 {{ end }}

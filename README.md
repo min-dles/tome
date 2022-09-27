@@ -1,96 +1,173 @@
-# Tome
+# Hugo Starter Theme with Tailwind CSS
 
-Tome is designed to be a powerful, lightweight theme for [Hugo](https://gohugo.io). It's built using Tailwind CSS with a clean and minimalist design that prioritises your content.
+Starter files for a Hugo theme with Tailwind CSS.
 
-🌏 [Demo site](https://MrGlitchByte.github.io/tome/)  
-📑 [Theme documentation](https://MrGlitchByte.github.io/tome/docs/)  
-🐛 [Bug reports & issues](https://github.com/MrGlitchByte/tome/issues)  
-💡 [Questions & feature requests](https://github.com/MrGlitchByte/tome/discussions)
+- set up to use [Tailwind CSS](https://tailwindcss.com) v3.0+
+- includes the official Tailwind CSS plugins
+  - [Typography](https://tailwindcss.com/docs/typography-plugin) for styling of markdown content
+  - [Forms](https://github.com/tailwindlabs/tailwindcss-forms) for basic resets for form styles
+  - [Aspect Ratio](https://github.com/tailwindlabs/tailwindcss-aspect-ratio) to give elements a fixed aspect ratio
+  - [Line Clamp](https://github.com/tailwindlabs/tailwindcss-line-clamp) for truncating text
+- use [Hugo Pipes](https://gohugo.io/hugo-pipes/) to build and load css based on `dev` or `build` environment
+- purge unused css classes with [PurgeCSS](https://www.purgecss.com) for `build`, but __not__ in `dev`
+- works as separate theme repo or as a local theme folder within a Hugo site
+- basic template setup with an index page, an about page and a posts category
+- responsive navigation header ~~with minimal javascript~~ with pure css to hide the nav on small screens
+- to keep that s***er down, the theme features a sticky footer
+- included development helper partials to show Hugo parameters and Tailwind CSS breakpoints during development
 
-![Screenshot](https://raw.githubusercontent.com/MrGlitchByte/tome/stable/images/screenshot.png)
+_Live long and code._
 
-## Features
+## What this theme is NOT
 
--   Fully responsive layout built with Tailwind CSS 3.0
--   Multiple colour schemes (or fully customise your own)
--   Dark mode (forced on/off or auto-switching with user toggle)
--   Highly customisable configuration
--   Multiple homepage layouts
--   Flexible with any content types, taxonomies and menus
--   Multilingual content support inlcuding support for RTL languages
--   Ability to link to posts on third-party websites
--   Client-side site search powered by Fuse.js
--   Diagrams and visualisations using Mermaid
--   Charts using Chart.js
--   Mathematical notation using KaTeX
--   SVG icons from FontAwesome 6
--   Automatic image resizing using Hugo Pipes
--   Heading anchors, Tables of Contents, Code copy, Buttons, Badges and more
--   HTML and Emoji support in articles 🎉
--   SEO friendly with links for sharing to social media
--   Fathom Analytics and Google Analytics support
--   RSS feeds, Favicons and comments support
--   Advanced customisation using simple Tailwind colour definitions and styles
--   Optimised for performance and accessibility with perfect Lighthouse scores
--   Fully documented with regular updates
+This theme is a starter setup theme to aid in developing Hugo themes using the Tailwind CSS framework. It is ***not*** a standalone theme ready to use.
 
-* * *
+## Prerequisites
 
-## Documentation
+Make sure to install `postcss-cli` and `autoprefixer` globally in your environment, as Hugo Pipe’s PostCSS requires it. This is mentioned in the [Hugo Docs](https://gohugo.io/hugo-pipes/postcss/).
 
-Tome has [extensive documentation](https://MrGlitchByte.github.io/tome/docs/) that covers all aspects of the theme. Be sure to [read the docs](https://MrGlitchByte.github.io/tome/docs/) to learn more about how to use the theme and its features.
+```bash
+npm install -g postcss-cli
+npm install -g autoprefixer
+```
 
-* * *
+Make sure to use a minimum Hugo version of v0.69.0 and above.
 
-## Installation
+Set the `writeStats` option in your Hugo `config` file, so that purging of CSS classes works in production. See `/exampleSite/config.toml` as a guideline.
 
-Tome supports several installation methods - as a Hugo Module (easiest), a git submodule, or as a completely manual install.
+```toml
+[build]
+  writeStats = true
+```
 
-Detailed instructions for each method can be found in the [Installation](https://MrGlitchByte.github.io/tome/docs/installation) docs. You should consult the documentation for the simplest setup experience. Below is a quick start guide using Hugo modules if you're already confident installing Hugo themes.
+## Basic usage to develop a separate Theme repo
 
-### Quick start using Hugo
+- clone and rename the repo
 
-> **Note:** Ensure you have **Go** and **Hugo** installed, and that you have created a new Hugo project before proceeding.
+```bash
+git clone https://github.com/dirkolbrich/hugo-tailwindcss-starter-theme new-theme-name
+```
 
-1.  From your project directory, initialise Hugo Modules:
+- make the theme your own by removing the git history from the cloned starter repo and initiate a new git repo
 
-    ```shell
-    hugo mod init github.com/<username>/<repo-name>
-    ```
+```bash
+cd new-theme-name
+rm -rf .git
+git init
+```
 
-2.  Create `config/_default/module.toml` and add the following:
+- install the necessary node packages
 
-    ```toml
-    [[imports]]
-    path = "github.com/MrGlitchByte/tome/v2"
-    ```
+```bash
+npm install
+```
 
-3.  Start your server using `hugo server` and the theme will be downloaded automatically.
+- edit the `config.toml` file in `exampleSite/` to reflect the `new-theme-name`
 
-4.  In the root folder of your website, delete the `config.toml` file that was generated by Hugo. Copy the `*.toml` config files from the theme into your `config/_default/` folder.
+```toml
+# in config.toml
+theme = "new-theme-name" # your new theme name here
+```
 
-    > **Note:** Do not overwrite the `module.toml` file you created above!
+- start a server to develop with `exampleSite`
 
-    You will find these theme config files in the Hugo cache directory, or [download a copy](https://minhaskamal.github.io/DownGit/#/home?url=https://github.com/MrGlitchByte/tome/tree/stable/config/_default) from GitHub.
+```bash
+hugo server -s exampleSite --themesDir=../.. --disableFastRender
+```
 
-5.  Follow the [Getting Started](https://MrGlitchByte.github.io/tome/docs/getting-started/) instructions to configure your website.
+## Usage directly within a Hugo repo as a theme package
 
-### Installing theme updates
+- start a new Hugo site
 
-As new releases are posted, you can update the theme using Hugo. Simply run `hugo mod get -u` from your project directory and the theme will automatically update to the latest release.
+```bash
+hugo new site new-site
+```
 
-Detailed [update instructions](https://MrGlitchByte.github.io/tome/docs/installation/#installing-updates) are available in the docs.
+- switch into the theme folder an clone the starter repo
 
-* * *
+```bash
+cd new-site/themes
+git clone https://github.com/dirkolbrich/hugo-tailwindcss-starter-theme new-theme-name
+```
 
-## Contributing
+- switch into the newly created theme folder, remove the git history from this starter repo and install the node packages
 
-Tome is expected to evolve over time. I intend to keep adding features and making changes as required.
+```bash
+cd new-theme-name
+rm -rf .git
+npm install
+```
 
-Feel free to get in touch with any issues or suggestions for new features you'd like to see.
+- edit the `config.toml` file in `new-site/` to reflect the new-theme-name
 
--   🐛 **Bug reports & issues:** Use [GitHub Issues](https://github.com/MrGlitchByte/tome/issues)
--   💡 **Ideas for new features:** Open a discussion on [GitHub Discussions](https://github.com/MrGlitchByte/tome/discussions)
--   🙋‍♀️ **General questions:** Head to [GitHub Discussions](https://github.com/MrGlitchByte/tome/discussions)
+```toml
+# in config.toml
+theme = "new-theme-name" # your new theme name here
+```
 
-If you're able to fix a bug or implement a new feature, I welcome PRs for this purpose. Learn more in the [contributing guidelines](https://github.com/MrGlitchByte/tome/blob/dev/CONTRIBUTING.md).
+- switch to the root of the new-site repo and start a server to view the index site
+
+```bash
+cd new-site
+hugo server --disableFastRender
+```
+
+Your content should go into `new-site/content`, the development of the site layout is done within `new-site/themes/new-theme-name/layout`.
+
+## Helpers
+
+Included are some helpers for the development phase (not visible in production):
+
+- `/partials/dev/parameters.html` shows basic Hugo page parameters
+- `/partials/dev/size-indicator.html` displays a floating circle in the upper right corner to indicate the current Tailwind CSS responsive breakpoint
+- `/partials/dev/container-indicator.html` shows the container area as a color filled backgroud
+
+If you don't need any of these helpers anymore, just delete the `{{- partial "dev/dev-tools.html" . -}}` line from `/layouts/_default/baseof.html`.
+
+## How does that work anyway?
+
+Within `postcss.config.js` a `purgecss` function is defined, which is only called based on the environment variable `HUGO_ENVIRONMENT === 'production'`.
+
+```js
+const themeDir = __dirname + '/../../';
+
+const purgecss = require('@fullhuman/postcss-purgecss')({
+    // see https://gohugo.io/hugo-pipes/postprocess/#css-purging-with-postcss
+    content: [
+        './hugo_stats.json',
+        themeDir + '/hugo_stats.json',
+        'exampleSite/hugo_stats.json',
+    ],
+    safelist : [ /type/ ], // this helps to not purge type attributes, this is needed for the Typography plugin
+    defaultExtractor: (content) => {
+        let els = JSON.parse(content).htmlElements;
+        return els.tags.concat(els.classes, els.ids);
+    }
+})
+
+module.exports = {    
+    plugins: [
+        require('tailwindcss')(themeDir + 'assets/css/tailwind.config.js'),
+        require('autoprefixer')({
+            path: [themeDir]
+        }),
+        ...(process.env.HUGO_ENVIRONMENT === 'production' ? [purgecss] : [])
+    ]
+}
+```
+
+During the build process Hugo Pipes checks this variable too and build the `styles.css` with some additional minification. This snippet is located in `/layouts/partials/head.html`.
+
+```html
+{{ $styles := resources.Get "css/styles.css" | postCSS (dict "config" "./assets/css/postcss.config.js") }}
+{{ if .Site.IsServer }}
+    <link rel="stylesheet" href="{{ $styles.RelPermalink }}">
+{{ else }}
+    {{ $styles := $styles| minify | fingerprint | resources.PostProcess }}
+    <link rel="stylesheet" href="{{ $styles.Permalink }}" integrity="{{ $styles.Data.Integrity }}">
+{{ end }}
+```
+
+## Reference
+
+Documentation for Hugo's [PostCSS setup](https://gohugo.io/hugo-pipes/postprocess/).

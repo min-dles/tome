@@ -1,75 +1,29 @@
 {
-  "name": "hugo-tome-theme",
-  "version": "1.1.9",
-  "description": "Tome theme for Hugo",
-  "scripts": {
-    "preinstall": "rimraf assets/vendor",
-    "postinstall": "vendor-copy",
-    "assets": "rimraf assets/vendor && vendor-copy",
-    "dev": "NODE_ENV=development ./node_modules/tailwindcss/lib/cli.js -i ./assets/css/main.css -o ./assets/css/compiled/main.css --jit -w",
-    "build": "NODE_ENV=production ./node_modules/tailwindcss/lib/cli.js -i ./assets/css/main.css -o ./assets/css/compiled/main.css --jit",
-    "example": "hugo server --source exampleSite --themesDir ../.. --buildDrafts -b http://localhost/tome/ -p 8008",
-    "lighthouse": "lhci autorun"
-  },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/MrGlitchbyte/tome"
-  },
-  "keywords": [
-    "hugo",
-    "hugo-theme",
-    "tailwind",
-    "dark-mode"
-  ],
-  "author": "Mr. Glitchbyte",
-  "funding": "https://github.com/sponsors/mrglitchbyte",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/mrglitchbyte/tome/issues"
-  },
-  "homepage": "https://github.com/mrglitchbyte/tome#readme",
-  "devDependencies": {
-    "@tailwindcss/typography": "^0.5.7",
-    "chart.js": "^3.9.1",
-    "fuse.js": "^6.6.2",
-    "katex": "^0.16.2",
-    "mermaid": "^9.1.6",
-    "prettier": "^2.7.1",
-    "prettier-plugin-go-template": "^0.0.13",
-    "prettier-plugin-tailwindcss": "^0.1.13",
-    "rimraf": "^3.0.2",
-    "tailwindcss": "^3.1.8",
-    "vendor-copy": "^3.0.1"
-  },
-  "vendorCopy": [],
-  "devVendorCopy": [
-    {
-      "from": "node_modules/mermaid/dist/mermaid.min.js",
-      "to": "assets/lib/mermaid/mermaid.min.js"
+    "name": "hugo-theme-tailwindcss-starter",
+    "version": "0.3.0",
+    "description": "Starter files for a Hugo theme with Tailwindcss",
+    "main": "index.js",
+    "repository": "https://github.com/dirkolbrich/hugo-theme-tailwindcss-starter",
+    "author": "dirkolbrich <github@dirkolbrich.de>",
+    "license": "MIT",
+    "scripts": {
+        "start": "hugo --gc"
     },
-    {
-      "from": "node_modules/chart.js/dist/chart.min.js",
-      "to": "assets/lib/chart/chart.min.js"
+    "devDependencies": {
+        "@fullhuman/postcss-purgecss": "^4.x",
+        "@tailwindcss/aspect-ratio": "^0.x",
+        "@tailwindcss/forms": "^0.x",
+        "@tailwindcss/line-clamp": "^0.x",
+        "@tailwindcss/typography": "^0.5.x",
+        "autoprefixer": "^10.x",
+        "postcss": "^8.x",
+        "postcss-cli": "^10.x",
+        "tailwindcss": "^3.x"
     },
-    {
-      "from": "node_modules/katex/dist/katex.min.js",
-      "to": "assets/lib/katex/katex.min.js"
-    },
-    {
-      "from": "node_modules/katex/dist/katex.min.css",
-      "to": "assets/lib/katex/katex.min.css"
-    },
-    {
-      "from": "node_modules/katex/dist/contrib/auto-render.min.js",
-      "to": "assets/lib/katex/auto-render.min.js"
-    },
-    {
-      "from": "node_modules/katex/dist/fonts/",
-      "to": "assets/lib/katex/fonts/"
-    },
-    {
-      "from": "node_modules/fuse.js/dist/fuse.min.js",
-      "to": "assets/lib/fuse/fuse.min.js"
-    }
-  ]
+    "browserslist": [
+        "last 1 version",
+        "> 1%",
+        "maintained node versions",
+        "not dead"
+    ]
 }
