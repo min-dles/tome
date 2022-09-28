@@ -10,6 +10,6 @@
 /* see https://tailwindcss.com/docs/functions-and-directives#layer */
 @layer components {
     .welcome-headline {
-        @apply text-green-700;
+        @apply text-yellow-700;
     }
 }
