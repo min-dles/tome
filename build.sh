@@ -7,7 +7,7 @@ if [ $# -eq 1 ]
 fi
 git commit -m "$msg"
 # Push source and build repos.
-git push -u origin main
+git push -u origin dev
 
 cd exampleSite/themes/tome
 sleep 2
