@@ -10,5 +10,5 @@ git commit -m "$msg"
 git push -u origin main
 
 cd exampleSite/themes/tome
-
+sleep 3
 git pull
