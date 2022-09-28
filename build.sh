@@ -9,6 +9,6 @@ git commit -m "$msg"
 # Push source and build repos.
 git push -u origin main
 
-cd exampleSite/
+cd exampleSite/themes/tome
 
 git pull
