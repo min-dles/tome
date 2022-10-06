@@ -6,6 +6,10 @@ const purgecss = require('@fullhuman/postcss-purgecss')({
         './hugo_stats.json',
         themeDir + '/hugo_stats.json',
         'exampleSite/hugo_stats.json',
+        themeDir + 'layouts/**/*.html',
+        themeDir + 'exampleSite/content/**/*.html',
+        'layouts/**/*.html',
+        'content/**/*.html',
     ],
     safelist : [ /type/ ],
     defaultExtractor: (content) => {
@@ -16,6 +20,9 @@ const purgecss = require('@fullhuman/postcss-purgecss')({
 
 module.exports = {    
     plugins: [
+        require('postcss-import')({
+            path: [themeDir]
+            }),
         require('tailwindcss')(themeDir + 'assets/css/tailwind.config.js'),
         require('autoprefixer')({
             path: [themeDir]
