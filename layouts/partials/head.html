@@ -17,14 +17,25 @@
 
 {{ $styles := resources.Get "css/styles.css" | postCSS (dict "config" "./assets/css/postcss.config.js") }}
 {{ $markdownStyles := resources.Get "css/markdown.css" | postCSS (dict "config" "./assets/css/postcss.config.js") }}
+{{ $tufteStyles := resources.Get "css/tufte.css" | postCSS (dict "config" "./assets/css/postcss.config.js") }}
+{{ $latexStyles := resources.Get "css/latex.css" | postCSS (dict "config" "./assets/css/postcss.config.js") }}
 {{ if .Site.IsServer }}
     <link rel="stylesheet" href="{{ $styles.RelPermalink }}">
     <link rel="stylesheet" href="{{ $markdownStyles.RelPermalink }}">
+    <link rel="stylesheet" href="{{ $tufteStyles.RelPermalink }}">
+    <link rel="stylesheet" href="{{ $latexStyles.RelPermalink }}">
+
 {{ else }}
     {{ $styles := $styles| minify | fingerprint | resources.PostProcess }}
     {{ $markdownStyles := $markdownStyles| minify | fingerprint | resources.PostProcess }}
+    {{ $tufteStyles := $tufteStyles| minify | fingerprint | resources.PostProcess }}
+    {{ $latexStyles := $latexStyles| minify | fingerprint | resources.PostProcess }}
     <link rel="stylesheet" href="{{ $styles.Permalink }}" integrity="{{ $styles.Data.Integrity }}">
     <link rel="stylesheet" href="{{ $markdownStyles.Permalink }}" integrity="{{ $markdownStyles.Data.Integrity }}">
+    <link rel="stylesheet" href="{{ $tufteStyles.RelPermalink }}" integrity="{{ $tufteStyles.Data.Integrity }}">
+    <link rel="stylesheet" href="{{ $latexStyles.RelPermalink }}" integrity="{{ $latexStyles.Data.Integrity }}">
 {{ end }}
 
 <link rel="stylesheet" href="/css/markdown.css" />
+<link rel="stylesheet" href="/css/tufte.css" />
+<link rel="stylesheet" href="/css/latex.css" />

@@ -1,5 +1,6 @@
 {{ define "main" }}
 {{ $fileReference := lower (replace $.File "\\" "/") }}
+{{- partial "head.html" . -}}
 <article class="text-gray-700 sm:mx-auto container max-w-3xl">
     {{ range .Params.tags }}
         {{ partial "widgets/tag" (dict "tag" .) }}
@@ -29,7 +30,7 @@
             {{ end }}
         {{ end }}
         <hr/>
-        <p><span class="font-bold">File reference: </span>{{ $fileReference }}</p>
+        <p><span class="font-bold">References: </span>{{ $fileReference }}</p>
     </div>
 </article>
 {{ end }}
