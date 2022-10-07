@@ -1,11 +1,6 @@
-/* TailwindCSS base styles */
-/* see https://tailwindcss.com/docs/functions-and-directives#tailwind */
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-@tailwind variants;
 /* Site Specific */
-@import "assets/css/site";
+@import "assets/css/tufte.css";
+@import "assets/css/latex.css";
 
 /* 
 *style.css
