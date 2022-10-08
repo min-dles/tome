@@ -10,7 +10,6 @@ body {
 }
 
 .content {
-  --min: 15ch;
   grid-column-gap: 2em;
   grid-row-gap: 0.5em;
   display: grid;
