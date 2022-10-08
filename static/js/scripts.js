@@ -1,22 +1,20 @@
+// need this for a reference to all loaded iframes, since nodelists aren't easily iterable without making ugly code :(
 const loadedFrames = []
 const hoverFunc = e => {
-    const anchor = e.target.firstElementChild.href
-    const currentFrame = loadedFrames.find(frame => frame.src === anchor)
-    if (currentFrame) {
-        currentFrame.style.top = `${e.clientY}px`;
-        currentFrame.style.left = `${e.clientX}px`;
-    } else {
-        const ifrm = document.createElement("iframe")
-        console.log('hoooover', e)
-        ifrm.setAttribute("src", anchor);
-        ifrm.style.width = "640px";
-        ifrm.style.height = "480px";
-        ifrm.style.position = "absolute";
-        ifrm.style.top = `${e.clientY}px`;
-        ifrm.style.left = `${e.clientX + 10}px`;
-        loadedFrames.push(ifrm)
-        e.target.appendChild(ifrm);
-    }
+    const href = e.target.firstElementChild.href
+    const iframeWidth = 69 * 10
+    const iframeHeight = 420 * 1
+    const ifrm = document.createElement("iframe")
+    ifrm.setAttribute("src", href);
+    ifrm.style.width = `${iframeWidth}px`;
+    ifrm.style.height = `${iframeHeight}px`;
+    ifrm.style.position = "absolute";
+    ifrm.style.top = `${e.clientY}px`;
+    // if mouse is on the right half of page
+    const offset = e.clientX > (window.innerWidth / 2) ? iframeWidth : 10
+    ifrm.style.left = `${e.clientX - offset}px`;
+    loadedFrames.push(ifrm)
+    e.target.appendChild(ifrm);
 }
 
 const leaveFunc = e => {
