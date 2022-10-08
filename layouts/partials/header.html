@@ -10,6 +10,8 @@
 	<link rel="stylesheet" href="/css/style.css" type="text/css" media="all" />
     <link rel="stylesheet" href="/css/tufte.css" type="text/css" media="all"/>
     <link rel="stylesheet" href="/css/latex.css" type="text/css" media="all"/>
+	<script defer language="javascript" type="text/javascript"  src="{{ "/js/scripts.js" | urlize | relURL }}"></script>
+
 
 	{{ with .OutputFormats.Get "rss" -}}
 		{{ printf `<link rel="%s" type="%s" href="%s" title="%s" />` .Rel .MediaType.Type .Permalink $.Site.Title | safeHTML }}
