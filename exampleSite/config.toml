@@ -1,19 +1,16 @@
-theme = "tome"
-languageCode = "en-us"
-baseurl = "http://example.com/"
-title = "Hugo Tailwindcss Starter"
+baseURL = "https://mynewhugosite.com"
+title = "My New Hugo Site"
+theme = "hugo-starter"
 
-author = "Mr. Glitchbyte"
-copyright = "Copyright © 2021, Mr. Glitchbyte, all rights reserved."
+[menu]
+  [[menu.main]]
+    identifier = "posts"
+    name = "Posts"
+    url = "/posts"
+    weight = 10
 
-[params]
-    name = "Hugo Tailwindcss Starter"
-    description = "A simple bootstraped theme for Hugo, build with Tailwindcss."
-
-[build]
-  writeStats = true
-
-# syntax highlight settings
-[markup]
-  [markup.highlight]
-    style = "dracula"
+  [[menu.main]]
+    identifier = "about"
+    name = "About"
+    url = "/about"
+    weight = 20
