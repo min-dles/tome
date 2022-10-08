@@ -1,16 +1,3 @@
 baseURL = "glitchbyte.io"
 title = "Tome"
 theme = "tome"
-
-[menu]
-  [[menu.main]]
-    identifier = "posts"
-    name = "Posts"
-    url = "/posts"
-    weight = 10
-
-  [[menu.main]]
-    identifier = "about"
-    name = "About"
-    url = "/about"
-    weight = 20
