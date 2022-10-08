@@ -1,6 +1,6 @@
-baseURL = "https://mynewhugosite.com"
-title = "My New Hugo Site"
-theme = "hugo-starter"
+baseURL = "glitchbyte.io"
+title = "Tome"
+theme = "tome"
 
 [menu]
   [[menu.main]]
