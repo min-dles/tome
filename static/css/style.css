@@ -10,8 +10,32 @@ body {
 }
 
 .content {
-  margin-bottom: 2rem;
+  --min: 15ch;
+  grid-column-gap: 2em;
+  grid-row-gap: 0.5em;
+  display: grid;
+  /* min() with 100% prevents overflow
+  in extra narrow spaces */
+  grid-template-columns: 1fr 1fr;
 }
+
+.content > *:not(article) {
+
+  grid-column: 1 / -1;
+  margin: 0;
+}
+
+/* verify breakpoint is what you want */
+@media (max-width: 768px) {
+  .content > article {
+    grid-column: 1 / -1;
+  }
+}
+
+
+
+
+
 
 /* NAVIGATION */
 
