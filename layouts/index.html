@@ -1,16 +1,20 @@
 {{ define "main" }}
 <div id="layout" class="pure-g">
   <article class="pure-u-1">
-    {{ partial "brand.html" . }}
-    {{ range where .Site.RegularPages "Type" "post"}}
     
-        <h1 class="content-title">
+    {{ partial "brand.html" . }}
+
+    {{ .Content }}
+
+    {{ range (.Paginate (where .Site.RegularPages "Type" "in" .Site.Params.mainSections)).Pages }}
+    -----
+        <h2 class="content-title">
           {{ if .IsNode }}
           <a href="{{ .Permalink }}">{{ .Title}}</a>
           {{ else }}
           <a href="{{ .RelPermalink }}">{{ .Title }}{{ if .Draft }} :: Draft {{end}}</a>
           {{ end }}
-        </h1>
+        </h2>
 
 
         <p>{{ truncate 120  .Summary }}</p>
