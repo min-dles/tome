@@ -30,7 +30,7 @@ body {
     color: #333;
     font-size: 125%;
     line-height: 1.5;
-    max-width: 45rem;
+    max-width: min-content;
     padding: 1rem;
     margin: 0 auto;
   }
@@ -45,7 +45,6 @@ body {
   }
   
   .content > *:not(article) {
-  
     grid-column: 1 / -1;
     margin: 0;
   }
