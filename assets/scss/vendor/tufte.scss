@@ -19,14 +19,10 @@
 @font-face {
     font-family: "et-book";
     src: url("et-book/et-book-display-italic-old-style-figures/et-book-display-italic-old-style-figures.eot");
-    src: url("et-book/et-book-display-italic-old-style-figures/et-book-display-italic-old-style-figures.eot?#iefix")
-            format("embedded-opentype"),
-        url("et-book/et-book-display-italic-old-style-figures/et-book-display-italic-old-style-figures.woff")
-            format("woff"),
-        url("et-book/et-book-display-italic-old-style-figures/et-book-display-italic-old-style-figures.ttf")
-            format("truetype"),
-        url("et-book/et-book-display-italic-old-style-figures/et-book-display-italic-old-style-figures.svg#etbookromanosf")
-            format("svg");
+    src: url("et-book/et-book-display-italic-old-style-figures/et-book-display-italic-old-style-figures.eot?#iefix") format("embedded-opentype"),
+        url("et-book/et-book-display-italic-old-style-figures/et-book-display-italic-old-style-figures.woff") format("woff"),
+        url("et-book/et-book-display-italic-old-style-figures/et-book-display-italic-old-style-figures.ttf") format("truetype"),
+        url("et-book/et-book-display-italic-old-style-figures/et-book-display-italic-old-style-figures.svg#etbookromanosf") format("svg");
     font-weight: normal;
     font-style: italic;
 }
@@ -45,8 +41,7 @@
 @font-face {
     font-family: "et-book-roman-old-style";
     src: url("et-book/et-book-roman-old-style-figures/et-book-roman-old-style-figures.eot");
-    src: url("et-book/et-book-roman-old-style-figures/et-book-roman-old-style-figures.eot?#iefix")
-            format("embedded-opentype"),
+    src: url("et-book/et-book-roman-old-style-figures/et-book-roman-old-style-figures.eot?#iefix") format("embedded-opentype"),
         url("et-book/et-book-roman-old-style-figures/et-book-roman-old-style-figures.woff") format("woff"),
         url("et-book/et-book-roman-old-style-figures/et-book-roman-old-style-figures.ttf") format("truetype"),
         url("et-book/et-book-roman-old-style-figures/et-book-roman-old-style-figures.svg#etbookromanosf") format("svg");
@@ -65,8 +60,8 @@ body {
     margin-right: auto;
     padding-left: 12.5%;
     font-family: et-book, Palatino, "Palatino Linotype", "Palatino LT STD", "Book Antiqua", Georgia, serif;
-    background-color: #fffff8;
-    color: #111;
+    background-color: #1d2021;
+    color: #bdae93;
     max-width: 1400px;
     counter-reset: sidenote-counter;
 }
@@ -143,21 +138,21 @@ div.epigraph {
     margin: 5em 0;
 }
 
-div.epigraph > blockquote {
+div.epigraph>blockquote {
     margin-top: 3em;
     margin-bottom: 3em;
 }
 
-div.epigraph > blockquote,
-div.epigraph > blockquote > p {
+div.epigraph>blockquote,
+div.epigraph>blockquote>p {
     font-style: italic;
 }
 
-div.epigraph > blockquote > footer {
+div.epigraph>blockquote>footer {
     font-style: normal;
 }
 
-div.epigraph > blockquote > footer > cite {
+div.epigraph>blockquote>footer>cite {
     font-style: italic;
 }
 
@@ -184,7 +179,7 @@ ul {
     -webkit-padding-end: 5%;
 }
 
-li  ul {
+li ul {
     width: 100%;
 }
 
@@ -229,16 +224,16 @@ a:visited {
 
 a:link {
     text-decoration: none;
-    background: -webkit-linear-gradient(#fffff8, #fffff8), -webkit-linear-gradient(#fffff8, #fffff8),
-        -webkit-linear-gradient(#333, #333);
-    background: linear-gradient(#fffff8, #fffff8), linear-gradient(#fffff8, #fffff8), linear-gradient(#333, #333);
+    background: -webkit-linear-gradient(#1d2021, #1d2021), -webkit-linear-gradient(#1d2021, #1d2021),
+        -webkit-linear-gradient(#1d2021, #1d2021);
+    background: linear-gradient(#1d2021, #1d2021), linear-gradient(#1d2021, #1d2021), linear-gradient(#1d2021, #1d2021);
     -webkit-background-size: 0.05em 1px, 0.05em 1px, 1px 1px;
     -moz-background-size: 0.05em 1px, 0.05em 1px, 1px 1px;
     background-size: 0.05em 1px, 0.05em 1px, 1px 1px;
     background-repeat: no-repeat, no-repeat, repeat-x;
-    text-shadow: 0.03em 0 #fffff8, -0.03em 0 #fffff8, 0 0.03em #fffff8, 0 -0.03em #fffff8, 0.06em 0 #fffff8,
-        -0.06em 0 #fffff8, 0.09em 0 #fffff8, -0.09em 0 #fffff8, 0.12em 0 #fffff8, -0.12em 0 #fffff8, 0.15em 0 #fffff8,
-        -0.15em 0 #fffff8;
+    text-shadow: 0.03em 0 #1d2021, -0.03em 0 #1d2021, 0 0.03em #1d2021, 0 -0.03em #1d2021, 0.06em 0 #1d2021,
+        -0.06em 0 #1d2021, 0.09em 0 #1d2021, -0.09em 0 #1d2021, 0.12em 0 #1d2021, -0.12em 0 #1d2021, 0.15em 0 #1d2021,
+        -0.15em 0 #1d2021;
     background-position: 0% 93%, 100% 93%, 0% 93%;
 }
 
@@ -320,7 +315,7 @@ p,
 footer,
 table,
 div.table-wrapper-small,
-div.supertable-wrapper > p,
+div.supertable-wrapper>p,
 div.booktabs-wrapper {
     width: 55%;
 }
@@ -336,24 +331,30 @@ div.table-wrapper {
 }
 
 @media screen and (max-width: 760px) {
+
     p,
     footer {
         width: 90%;
     }
+
     pre.code {
         width: 87.5%;
     }
+
     ul {
         width: 85%;
     }
+
     figure {
         max-width: 90%;
     }
+
     figcaption,
     figure.fullwidth figcaption {
         margin-right: 0%;
         max-width: none;
     }
+
     blockquote p,
     blockquote footer {
         width: 90%;
@@ -414,12 +415,14 @@ label.margin-toggle:not(.sidenote-number) {
     label.margin-toggle:not(.sidenote-number) {
         display: inline;
     }
+
     .sidenote,
     .marginnote {
         display: none;
     }
-    .margin-toggle:checked + .sidenote,
-    .margin-toggle:checked + .marginnote {
+
+    .margin-toggle:checked+.sidenote,
+    .margin-toggle:checked+.marginnote {
         display: block;
         float: left;
         left: 1rem;
@@ -429,13 +432,16 @@ label.margin-toggle:not(.sidenote-number) {
         vertical-align: baseline;
         position: relative;
     }
+
     label {
         cursor: pointer;
     }
+
     pre.code {
         width: 90%;
         padding: 0;
     }
+
     .table-caption {
         display: block;
         float: right;
@@ -448,14 +454,17 @@ label.margin-toggle:not(.sidenote-number) {
         vertical-align: baseline;
         position: relative;
     }
+
     div.table-wrapper,
     table,
     table.booktabs {
         width: 85%;
     }
+
     div.table-wrapper {
         border-right: 1px solid #efefef;
     }
+
     img {
         width: 100%;
     }

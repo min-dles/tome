@@ -6,6 +6,32 @@
 
 @import url("https://fonts.googleapis.com/css2?family=Fira+Code:wght@351&display=swap");
 
+:root {
+    --sidenotes-max-width: 550px;
+
+    --popups-popup-max-width: 640px;
+    --popups-popup-max-height: 480px;
+    --popups-popup-with-title-bar-min-width: 320px;
+    --popups-annotation-popup-min-width: 360px;
+    --popups-annotation-popup-min-height: 120px;
+    --popups-aux-links-popup-min-width: 360px;
+    --popups-aux-links-popup-min-height: 120px;
+    --popups-local-transclude-popup-min-width: 360px;
+    --popups-local-transclude-popup-min-height: 120px;
+    --popups-popup-border-width: 3px;
+    --popups-popup-title-bar-height: calc(1.5rem + 1px);
+    --popups-popup-mini-title-bar-height: calc(1rem + 1px);
+    --popups-video-iframe-width: 495px;
+    --popups-video-iframe-height: 310px;
+    --popups-image-popup-min-size: 64px;
+
+    --popins-popin-max-height: 50vh;
+    --popins-popin-min-height: 120px;
+    --popins-popin-border-width: 3px;
+    --popins-popin-title-bar-height: 1.75rem;
+    --popins-popin-footer-bar-height: 1.75rem;
+}
+
 /* When setting the primary font stack, apply it to the Pure grid units along */
 /* with `html`, `button`, `input`, `select`, and `textarea`. Pure Grids use */
 /* specific font stacks to ensure the greatest OS/browser compatibility. */
@@ -51,12 +77,14 @@ h1.content-title {
     /*max-width: 50rem;*/
     font-size: 4rem;
 }
+
 h1.content-title a:link,
 h1.content-title a:visited {
     background: transparent;
     text-decoration: none;
     color: inherit;
 }
+
 h1.content-title a:hover,
 h1.content-title a:focus {
     color: darkgray;
@@ -74,11 +102,13 @@ h1.content-title a:focus {
         width: 87.5%;
         max-width: 45rem;
     }
+
     li {
         margin: 0;
         /*font-size: 95%;*/
     }
 }
+
 .list-page .list-date {
     display: inline;
     font-size: 0.75em;
@@ -89,7 +119,8 @@ h1.content-title a:focus {
 table:not(.lntable) {
     margin-top: 1em;
     font-size: 1.4rem;
-    width: auto; /* making booktabs style tables the unstyled default in case someone uses Markdown styling */
+    width: auto;
+    /* making booktabs style tables the unstyled default in case someone uses Markdown styling */
     /* margin: 0 auto; */
     /* border-spacing: 0px; */
     border-top: 2px solid #111;
@@ -110,6 +141,7 @@ table.lntable {
     td.lntd {
         padding: 0em;
     }
+
     border-spacing: 0;
     padding: 0;
 }
