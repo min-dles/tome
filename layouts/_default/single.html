@@ -1,5 +1,10 @@
-{{ partial "head.html" . }}
+{{/*  
 
+  This template render single pages 
+
+*/}}
+
+{{ define "main" }}
 <div id="layout" class="pure-g">
   <article class="pure-u-1">
     {{ partial "brand.html" . }}
@@ -11,3 +16,4 @@
     </section>
   </article>
 </div>
+{{ end }}
