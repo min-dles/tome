@@ -6,24 +6,26 @@
 
     {{ .Content }}
 
-    {{ range (.Paginate (where .Site.RegularPages "Type" "in" .Site.Params.mainSections)).Pages }}
-    -----
-        <h2 class="content-title">
-          {{ if .IsNode }}
-          <a href="{{ .Permalink }}">{{ .Title}}</a>
-          {{ else }}
-          <a href="{{ .RelPermalink }}">{{ .Title }}{{ if .Draft }} :: Draft {{end}}</a>
+
+    {{ $categories:= .Site.Taxonomies.categories }}
+    {{ range $cat := .Site.Params.category_order }}
+      {{ $value := index $categories $cat }}
+      {{ print $value }}
+      <h2>{{ $cat }}</h2>
+        <ul>
+          {{ range $value.Pages }}
+          <li>
+            <h3 class="content-title">
+              {{ if .IsNode }}
+              <a href="{{ .Permalink}}">{{.Title }}</a>
+              {{ else }}
+              <a href="{{ .RelPermalink }}">{{ .Title }}{{ if .Draft }} :: Draft {{end}}</a>
+            {{ end }}
+            </h3>
+          </li>
           {{ end }}
-        </h2>
-
-
-        <p>{{ truncate 120  .Summary }}</p>
-        {{/*  {{ if .Truncated }}  */}}
-        <p><a href="{{ .RelPermalink  }}">Read On &rarr;</a></p>
-        {{/*  {{ end }}  */}}
-
-    {{ end  }}
-    {{ partial "footer.html" . }}
+        </ul>
+      {{ end }}
   </article>
 </div>
 {{ end }}
