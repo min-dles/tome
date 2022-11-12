@@ -1,23 +1,34 @@
-# Tufte Hugo Theme
+# Tome Hugo Theme
 [![Contributor Covenant](https://img.shields.io/badge/Contributor%20Covenant-2.0-4baaaa.svg)](code_of_conduct.md)
 [![build github pages](https://github.com/slashformotion/hugo-tufte/actions/workflows/build-site-ghpages.yml/badge.svg)](https://github.com/slashformotion/hugo-tufte/actions/workflows/build-site-ghpages.yml)
 
 ***This theme isn't actively maintained, if you want a new feature please file a pull request.***
 
-Hugo-Tufte is a minimalist blog-like theme for the
+Tome is a minimalist blog-like theme for the
 [static site generator Hugo](https://gohugo.io) that
 attempts to be a faithful implementation of the
 [Tufte-css](https://github.com/edwardtufte/tufte-css) project.
 It supports mathematical typesetting via [katex](https://katex.org/) or [MathJax](https://www.mathjax.org).
 By utilizing copious partial templates the theme is largely customizable.
 
-This is a fork of the original [hugo-tufte](https://github.com/shawnohare/hugo-tufte). 
+This is a fork of the original [hugo-tufte](https://slashformotion.github.io/hugo-tufte/). 
 
 ## Quickstart
 
 ### Prerequisite: Hugo Extended
 
 You'll need to install Hugo Extended for this theme to test it locally, since this theme uses SCSS.
+- On Mac:
+  - Using [Homebrew](https://brew.sh/)
+    ```bash
+    brew install hugo
+    ```
+  - Set the following at the end of you `config.toml`:
+    ```toml
+    [hugoVersion]
+      extended = true
+      min = "0.87.0"
+    ```
 - On Windows:
   - Using [Chocolatey](https://chocolatey.org/):
     ```powershell
@@ -26,7 +37,7 @@ You'll need to install Hugo Extended for this theme to test it locally, since th
 
 ### For a new site
 
-```powershell
+```bash
 # this code is shell-agnostic, and should work in cmd, powershell, bash, zsh....
 hugo new site <your-site-name> # create your new site with hugo in your pwd
 cd <your-site-name>\themes\    # cd into the themes directory
@@ -94,7 +105,7 @@ You can add links to your social media profile by using thoses parameters:
 - `orcid`: string
 - `google_scholar`: string
 
-Please see [`exampleSite/config.toml`](https://github.com/slashformotion/hugo-tufte/blob/master/exampleSite/config.toml#L30) to see the full implementation with exemples.
+Please see [`exampleSite/config.toml`](https://github.com/MrGlitchByte/tome/blob/dev/exampleSite/config.toml) to see the full implementation with exemples.
 
 ### Page Parameters
 
