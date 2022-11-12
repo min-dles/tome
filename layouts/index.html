@@ -7,7 +7,7 @@
     {{ .Content }}
 
 
-    {{ $categories:= .Site.Taxonomies.categories }}
+    <!-- {{ $categories:= .Site.Taxonomies.categories }}
     {{ range $cat := .Site.Params.category_order }}
       {{ $value := index $categories $cat }}
       {{ print $value }}
@@ -25,7 +25,7 @@
           </li>
           {{ end }}
         </ul>
-      {{ end }}
+      {{ end }} -->
   </article>
 </div>
 {{ end }}
