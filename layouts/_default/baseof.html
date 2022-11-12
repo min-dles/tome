@@ -1,4 +1,14 @@
 <!DOCTYPE html>
+<<<<<<< HEAD
+<html lang="{{ .Site.LanguageCode }}">
+    {{- partial "header.html" . -}}
+
+    <body >
+        {{ block "main" . }}{{ end }}
+    </body>
+
+</html>
+=======
 <html lang='{{ .Site.LanguageCode }}'>
     {{- partial "head.html" . -}}
     <body class="flex flex-col min-h-screen">
@@ -11,3 +21,4 @@
         {{- partial "footer.html" . -}}
     </body>
 </html>
+>>>>>>> main

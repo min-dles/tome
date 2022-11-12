@@ -1,3 +1,3 @@
-module github.com/MrGlitchByte/tome/v2
+module github.com/slashformotion/hugo-tufte
 
-go 1.18
+go 1.17

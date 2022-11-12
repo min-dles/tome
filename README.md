@@ -1,96 +1,194 @@
-# Tome
+# Tome Hugo Theme
+[![Contributor Covenant](https://img.shields.io/badge/Contributor%20Covenant-2.0-4baaaa.svg)](code_of_conduct.md)
+[![build github pages](https://github.com/slashformotion/hugo-tufte/actions/workflows/build-site-ghpages.yml/badge.svg)](https://github.com/slashformotion/hugo-tufte/actions/workflows/build-site-ghpages.yml)
 
-Tome is designed to be a powerful, lightweight theme for [Hugo](https://gohugo.io). It's built using Tailwind CSS with a clean and minimalist design that prioritises your content.
+***This theme isn't actively maintained, if you want a new feature please file a pull request.***
 
-🌏 [Demo site](https://MrGlitchByte.github.io/tome/)  
-📑 [Theme documentation](https://MrGlitchByte.github.io/tome/docs/)  
-🐛 [Bug reports & issues](https://github.com/MrGlitchByte/tome/issues)  
-💡 [Questions & feature requests](https://github.com/MrGlitchByte/tome/discussions)
+Tome is a minimalist blog-like theme for the
+[static site generator Hugo](https://gohugo.io) that
+attempts to be a faithful implementation of the
+[Tufte-css](https://github.com/edwardtufte/tufte-css) project.
+It supports mathematical typesetting via [katex](https://katex.org/) or [MathJax](https://www.mathjax.org).
+By utilizing copious partial templates the theme is largely customizable.
 
-![Screenshot](https://raw.githubusercontent.com/MrGlitchByte/tome/stable/images/screenshot.png)
+This is a fork of the original [hugo-tufte](https://slashformotion.github.io/hugo-tufte/). 
+
+## Quickstart
+
+### Prerequisite: Hugo Extended
+
+You'll need to install Hugo Extended for this theme to test it locally, since this theme uses SCSS.
+- On Mac:
+  - Using [Homebrew](https://brew.sh/)
+    ```bash
+    brew install hugo
+    ```
+  - Set the following at the end of you `config.toml`:
+    ```toml
+    [hugoVersion]
+      extended = true
+      min = "0.87.0"
+    ```
+- On Windows:
+  - Using [Chocolatey](https://chocolatey.org/):
+    ```powershell
+    choco install hugo-extended # remember, you might need admin privs
+    ```
+
+### For a new site
+
+```bash
+# this code is shell-agnostic, and should work in cmd, powershell, bash, zsh....
+hugo new site <your-site-name> # create your new site with hugo in your pwd
+cd <your-site-name>\themes\    # cd into the themes directory
+git clone <this-git-repo>      # HTTPS link @ the top of the page if you've never done this before
+```
+
+Add `theme = 'hugo-tufte'` to your `config.toml` to let your site know to actually use _this_ theme, specifically.
+
+Then run `hugo server -D` and open up `localhost:1313/` or wherever it says in Firefox.
 
 ## Features
 
--   Fully responsive layout built with Tailwind CSS 3.0
--   Multiple colour schemes (or fully customise your own)
--   Dark mode (forced on/off or auto-switching with user toggle)
--   Highly customisable configuration
--   Multiple homepage layouts
--   Flexible with any content types, taxonomies and menus
--   Multilingual content support inlcuding support for RTL languages
--   Ability to link to posts on third-party websites
--   Client-side site search powered by Fuse.js
--   Diagrams and visualisations using Mermaid
--   Charts using Chart.js
--   Mathematical notation using KaTeX
--   SVG icons from FontAwesome 6
--   Automatic image resizing using Hugo Pipes
--   Heading anchors, Tables of Contents, Code copy, Buttons, Badges and more
--   HTML and Emoji support in articles 🎉
--   SEO friendly with links for sharing to social media
--   Fathom Analytics and Google Analytics support
--   RSS feeds, Favicons and comments support
--   Advanced customisation using simple Tailwind colour definitions and styles
--   Optimised for performance and accessibility with perfect Lighthouse scores
--   Fully documented with regular updates
+### Math
 
-* * *
+[Katex](https://katex.org/) or [MathJax](https://www.mathjax.org) renders LaTeX written inside of markdown files. LaTeX can be written more or less as normal. Some examples:
 
-## Documentation
+- This `$\frac{1}{2}$` will be rendered inline.
+- A simple displayed equation: `$$f(x, y) := e^{x^2 - y^2}.$$`
 
-Tome has [extensive documentation](https://MrGlitchByte.github.io/tome/docs/) that covers all aspects of the theme. Be sure to [read the docs](https://MrGlitchByte.github.io/tome/docs/) to learn more about how to use the theme and its features.
+There currently seems to be some weirdness with other environments,
+such as the `aligned` environment (`align*` is not supported by katex).  These environments will render provided
+they are wrapped in `<p>` tags and blank lines.  The snippet below should
+render correctly.
+```latex
+Let $G$ be a finite group with exponent $2$.  Then every element is
+an involution, hence for any $x$, $y$ in $G$ we have:
 
-* * *
+<p>
+\begin{aligned}
+  e &= (xy)^2  \\
+  &=xyxy \implies \\
+  y^{-1} &= xyx \implies \\
+  y^{-1}x^{-1} &= xy,
+\end{aligned}
+</p>
 
-## Installation
+establishing that $G$ is abelian.
+```
 
-Tome supports several installation methods - as a Hugo Module (easiest), a git submodule, or as a completely manual install.
+### Site Parameters
 
-Detailed instructions for each method can be found in the [Installation](https://MrGlitchByte.github.io/tome/docs/installation) docs. You should consult the documentation for the simplest setup experience. Below is a quick start guide using Hugo modules if you're already confident installing Hugo themes.
+The site specific parameters that this theme recognizes are:
 
-### Quick start using Hugo
+- `subtitle` string: This is displayed under the main title.
+- `showPoweredBy` boolean: if true, display a shoutout to Hugo and this theme.
+- `copyrightHolder` string: Inserts the value in the default copyright notice.
+- `copyright` string: Custom copyright notice.
+- `math` boolean: Site wide kill switch for Latex support
+- `katex` boolean: if "katex" is set to true katex will be used to render LaTex, if not MathJax will be used instead. (Set to `true` by default)
+- `codeBlocksDark` boolean: if true, code blocks will use a dark theme.
 
-> **Note:** Ensure you have **Go** and **Hugo** installed, and that you have created a new Hugo project before proceeding.
+***Socials***
 
-1.  From your project directory, initialise Hugo Modules:
+You can add links to your social media profile by using thoses parameters:
+- `github`: string
+- `gitlab`: string
+- `twitter`: string
+- `patreon`: string
+- `youtube`: string
+- `medium`: string
+- `reddit`: string
+- `stackoverflow`: string
+- `instagram`: string
+- `mastodon`: string
+- `orcid`: string
+- `google_scholar`: string
 
-    ```shell
-    hugo mod init github.com/<username>/<repo-name>
-    ```
+Please see [`exampleSite/config.toml`](https://github.com/MrGlitchByte/tome/blob/dev/exampleSite/config.toml) to see the full implementation with exemples.
 
-2.  Create `config/_default/module.toml` and add the following:
+### Page Parameters
 
-    ```toml
-    [[imports]]
-    path = "github.com/MrGlitchByte/tome/v2"
-    ```
+- `hideDate` boolean: if true, do not display a page date.  When `meta` is set to
+  true, `hideDate` takes greater precedence.
+- `hideReadTime` boolean: if true, do not display the page's reading time
+  estimate.  When `meta` is set to true, `hideReadTime` takes greater precedence.
+- `math` boolean: if true, try to render the page's LaTeX code using MatheJax.
+- `meta` boolean: if true, display page metadata such as author, date, categories provided
+  these page parameters exist and are not overridden.  Content in the `/post` directory,
+  (i.e., pages of type "post") ignore this parameter.
+- `toc` boolean: if true, display the table of contents for the page.
 
-3.  Start your server using `hugo server` and the theme will be downloaded automatically.
+### Shortcodes
 
-4.  In the root folder of your website, delete the `config.toml` file that was generated by Hugo. Copy the `*.toml` config files from the theme into your `config/_default/` folder.
+This theme provides the following shortcodes in an attempt to completely
+support all the features present in the
+[Tufte-css](https://github.com/edwardtufte/tufte-css) project.
 
-    > **Note:** Do not overwrite the `module.toml` file you created above!
+- `blockquote`
+  - **Description**: Wrap text in a blockquote and insert optional
+  `cite` or `footer` metadata.
+  - **Usage**: Accepts the named parameters `cite` and `footer`.
+  - **Example**:
+  ```html
+  {{< blockquote cite="www.shawnohare.com" footer="Shawn" >}}
+    There is nothing more beautiful than an elegant mathematical proof.
+  {{< /blockquote >}}
+  ```
 
-    You will find these theme config files in the Hugo cache directory, or [download a copy](https://minhaskamal.github.io/DownGit/#/home?url=https://github.com/MrGlitchByte/tome/tree/stable/config/_default) from GitHub.
+- `div`
+   - **Description**: This shortcode is provided as a work-around for wrapping
+   complex blocks of markdown in div tags. The wrapped text can
+   include other shortcodes
+   - **Usage**: Identical to the `section` shortcode.
+   Accepts the style parameters `class` and `id`.
+   If only the positional argument `"end"` is passed, a closing tag
+   will be inserted.
+   - **Example**: `{{< div class="my-class" >}}` inserts a
+   `<div class="my-class">` tag, while
+   `{{<div "end" >}}` inserts the closing `</div>` tag.
 
-5.  Follow the [Getting Started](https://MrGlitchByte.github.io/tome/docs/getting-started/) instructions to configure your website.
+- `epigraph`
+  - **Description**: Create an epigraph with the wrapped text.
+  - **Usage**: To include a footer with source attribution, pass in the
+  optional named parameters `pre`, `cite`, `post`, `link`. These parameters
+  make no styling assumptions, so spacing is important.  A more compactly
+  styled epigraph will be used if the `type` parameter is set to `compact`.
+  - **Example**:
+  ```html
+  {{< epigraph pre="Author Writer, " cite="Math is Fun" link='https://www.google.com' >}}
+  This is an example of an epigraph with some math
+  $ \mathbb N \subseteq \mathbb R $
+  to start the beginning of a section.
+  {{< /epigraph >}}
+  ```
 
-### Installing theme updates
+- `marginnote`
+  - **Description**: Wrap text to produce a numberless margin note.
+  - Usage: `{{< marginnote >}}...{{< /marginnote >}}`
+  - **Example**: 
+  ```html
+  {{< marginnote >}}Some marginnote{{< /marginnote>}}
+  ```
 
-As new releases are posted, you can update the theme using Hugo. Simply run `hugo mod get -u` from your project directory and the theme will automatically update to the latest release.
+- `section`
+   - **Description**: This shortcode is provided as a work-around for wrapping
+   complex blocks of markdown in section tags. The wrapped text can
+   include other shortcodes
+   - **Usage**: Accepts the style parameters `class` and `id`.
+   If only the positional argument `"end"` is passed, a closing tag
+   will be inserted.
+   - **Example**: `{{< section class="my-class" >}}` inserts a
+   `<section class="my-class">` tag, while
+   `{{<section "end" >}}` inserts the closing `</section>` tag.
 
-Detailed [update instructions](https://MrGlitchByte.github.io/tome/docs/installation/#installing-updates) are available in the docs.
 
-* * *
+- `sidenote`
+  - **Description**: Wrap text to produce an automatically numbered sidenote.
+  - **Usage**: identical to `marginnote`
+  `{{< sidenote >}}...{{< /sidenote >}}`
+  - **Example**: 
+  ```html
+  {{< sidenote >}}Some sidenote{{< /sidenote >}}
+  ```
 
-## Contributing
-
-Tome is expected to evolve over time. I intend to keep adding features and making changes as required.
-
-Feel free to get in touch with any issues or suggestions for new features you'd like to see.
-
--   🐛 **Bug reports & issues:** Use [GitHub Issues](https://github.com/MrGlitchByte/tome/issues)
--   💡 **Ideas for new features:** Open a discussion on [GitHub Discussions](https://github.com/MrGlitchByte/tome/discussions)
--   🙋‍♀️ **General questions:** Head to [GitHub Discussions](https://github.com/MrGlitchByte/tome/discussions)
-
-If you're able to fix a bug or implement a new feature, I welcome PRs for this purpose. Learn more in the [contributing guidelines](https://github.com/MrGlitchByte/tome/blob/dev/CONTRIBUTING.md).

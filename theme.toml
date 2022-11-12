@@ -1,16 +1,14 @@
-# tome theme for Hugo
-
-name = "Tome"
+name = "Tufte"
 license = "MIT"
-licenselink = "https://github.com/MrGlitchByte/tome/blob/master/LICENSE"
-description = "A powerful, lightweight Tufte CSS theme for Hugo built with Tailwind CSS."
+licenselink = "https://github.com/slashformotion/hugo-tufte/blob/master/LICENSE.md"
+description = "A minimalist blog theme using Tufte-css."
+homepage = "https://github.com/slashformotion/hugo-tufte"
+demo = "https://slashformotion.github.io/hugo-tufte/"
+tags = ["blog", "tufte", "minimal", 'light', "personal"]
+features = ["math", "tufte-css", "tufte"]
+min_version = 0.83
 
-homepage = "https://github.com/MrGlitchByte/tome/"
-#demosite = "https://MrGlitchByte.github.io/tome/"
-
-tags = ["blog", "minimal", "responsive", "dark mode", "dark", "light", "tailwind", "personal"]
-features = ["syntax higlighting", "dark mode", "emoji"]
-
-[author]
-  name = "Mr Glitchbyte"
-  homepage = "https://glitchbyte.io"
+authors = [
+  {name = "Shawn O'Hare", homepage = "http://www.shawnohare.com"},
+  {name = "Slashformotion", homepage = "https://github.com/slashformotion"}
+]
