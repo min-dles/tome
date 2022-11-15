@@ -1,0 +1,14 @@
+// Frontpage list styling
+.row {
+    grid-row: span 2;
+}
+
+.column {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: .75rem 1rem;
+}
+
+h2{
+    text-decoration: underline;
+}
