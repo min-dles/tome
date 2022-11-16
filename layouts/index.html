@@ -10,46 +10,46 @@
 </div>
 
 
-<div class="row">
-  <div class="column">
-    <h2>Newest</h2>
-    <ul>
-      {{ range first 5 .Site.RegularPages }}
-      <li>
-        <a href="{{ .RelPermalink }}">{{ .Title }}</a>
-      </li>
-      {{ end }}
-    </ul>
-  </div>
-  
 
-  <div class="column">
-    <h2>Last Modified</h2>
-    <ul>
-      {{ range first 5 .Site.RegularPages.ByLastmod }}
-      <li>
-        <a href="{{ .RelPermalink }}">{{ .Title }}</a>
-      </li>
+<section id="column" class="column">
+  <h2 class="underline">Newest</h2>
+  <ul>
+    {{ range first 5 .Site.RegularPages }}
+    <li>
+      <a href="{{ .RelPermalink }}">{{ .Title }}</a>
+    </li>
     {{ end }}
-    </ul>
-  </div>
-</div>
+  </ul>
+</section>
+ 
 
-
-<div class="row">
-  <div class="column">
-    {{ range .Site.RegularPages.GroupBy "Section" "asc" }}
-  <h2>{{ .Key }}</h2>
-    <ul>
-      {{ range .Pages.ByPublishDate }}
-      <li>
-          <a href="{{ .RelPermalink }}">{{ .Title }}</a>
-      </li>
-      {{ end }}
-    </ul>
+<section id="column" class="column">
+  <h2 class="underline">Last Modified</h2>
+  <ul>
+    {{ range first 5 .Site.RegularPages.ByLastmod }}
+    <li>
+      <a href="{{ .RelPermalink }}">{{ .Title }}</a>
+    </li>
   {{ end }}
-  </div>
-</div>
+  </ul>
+</section>
 
+
+
+
+<section id="column" class="column">
+  {{ range .Site.RegularPages.GroupBy "Section" "asc" }}
+  <h2 class="underline">{{ .Key }}</h2>
+  <ul>
+    {{ range .Pages.ByPublishDate }}
+    <li>
+        <a href="{{ .RelPermalink }}">{{ .Title }}</a>
+    </li>
+    {{ end }}
+  </ul>
+{{ end }}
+</section>
+
+ 
 
 {{ end }}

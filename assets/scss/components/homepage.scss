@@ -1,10 +1,12 @@
-// Frontpage list styling
-// .row {
-//     grid-row: span ;
-// }
+
 
 .column {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-gap: .75rem 1rem;
+    overflow-wrap: break-word;
+}
+
+.underline {
+    padding-right:10%; 
+    border-bottom:2px solid #333; 
+    position:auto;
 }
