@@ -7,6 +7,7 @@ layout: "baseof"
 
 
 <div id="layout" class="pure-g">
+
     <article class="pure-u-1">
         {{ partial "brand.html" . }}
         {{ range first 5 .Site.Pages }}
@@ -18,6 +19,7 @@ layout: "baseof"
         {{ end  }}
         {{ partial "footer.html" . }}
     </article>
+
 </div>
 
 {{ end }}

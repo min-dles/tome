@@ -1,47 +1,99 @@
-/* We utilize the html5 summary tags in order to create a post archive */
-/* with built-in folding. */
-details {
-    border-radius: 3px;
-}
+// /* We utilize the html5 summary tags in order to create a post archive */
+// /* with built-in folding. */
+// details {
+//     border-radius: 3px;
+// }
 
-details summary {
-    vertical-align: top;
-    padding: .3em .5em;
-    outline: none;
-    /*color: rgba(65, 70, 75, 1);*/
-}
+// details summary {
+//     vertical-align: top;
+//     padding: .3em .5em;
+//     outline: none;
+//     /*color: rgba(65, 70, 75, 1);*/
+// }
 
-details summary.year {
-    font-size: 1.5rem;
-}
+// details summary.year {
+//     font-size: 1.5rem;
+// }
 
 // details[open] summary {
 // }
 
 
-/* Table of Contents */
-.toc summary {
-    font-size: 1.5rem;
-    margin-bottom: -1.5rem;
-    padding-left: 0;
+// /* Table of Contents */
+// .toc summary {
+//     font-size: 1.5rem;
+//     margin-bottom: -1.5rem;
+//     padding-left: 0;
+// }
+
+// .toc {
+// 	// float: right;
+// 	/*padding: 0rem 1rem 1rem 1rem;*/
+//     /*margin-top: 1rem;*/
+// 	// border-left: 1px solid #eee;
+// }
+
+// .toc ul {
+// 	list-style: none;
+// 	display: block;
+// 	/*margin-top: 0.75rem;*/
+// 	padding: 0;
+//     width: 87.5%;
+// }
+
+// .toc li {
+//     line-height: 0.5rem;
+//     margin: 1rem;
+// }
+
+
+/* 1. Enable smooth scrolling */
+
+  
+/* 2. Make nav sticky */
+main > nav {
+position: -webkit-sticky;
+position: sticky;
+left: 50;
+top: 50;
+display: inline-block;
+align-self: start;
 }
 
-.toc {
-	// float: right;
-	/*padding: 0rem 1rem 1rem 1rem;*/
-    /*margin-top: 1rem;*/
-	// border-left: 1px solid #eee;
+/* Sidebar Navigation */
+.section-nav {
+margin-top: 2rem;
+padding-left: 0;
+border-left: 1px solid #efefef;
 }
 
-.toc ul {
-	list-style: none;
-	display: block;
-	/*margin-top: 0.75rem;*/
-	padding: 0;
-    width: 87.5%;
+.section-nav a {
+text-decoration: none;
+display: block;
+padding: .125rem 0;
+//color: #ccc;
+transition: all 50ms ease-in-out; /* 💡 This small transition makes setting of the active state smooth */
 }
 
-.toc li {
-    line-height: 0.5rem;
-    margin: 1rem;
+.section-nav a:hover,
+.section-nav a:focus {
+color: #666;
 }
+
+/** Poor man's reset **/
+* {
+box-sizing: border-box;
+}
+
+
+
+/** page layout **/
+main {
+display: grid;
+grid-template-columns: 1fr 15em;
+max-width: 100em;
+width: 100%;
+margin: 0 auto;
+}
+
+/** enlarge the sections for this demo, so that we have a long scrollable page **/
