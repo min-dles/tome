@@ -10,7 +10,6 @@
 </div>
 
 
-
 <section id="column" class="column">
   <h2 class="underline">Newest</h2>
   <ul>
@@ -35,8 +34,6 @@
 </section>
 
 
-
-
 <section id="column" class="column">
   {{ range .Site.RegularPages.GroupBy "Section" "asc" }}
   <h2 class="underline">{{ .Key }}</h2>
@@ -49,7 +46,5 @@
   </ul>
 {{ end }}
 </section>
-
- 
 
 {{ end }}
