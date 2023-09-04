@@ -1,31 +1,48 @@
 {{ define "main" }}
+
 <div id="layout" class="pure-g">
   <article class="pure-u-1">
-    
     {{ partial "brand.html" . }}
-
     {{ .Content }}
-
-
-    <!-- {{ $categories:= .Site.Taxonomies.categories }}
-    {{ range $cat := .Site.Params.category_order }}
-      {{ $value := index $categories $cat }}
-      {{ print $value }}
-      <h2>{{ $cat }}</h2>
-        <ul>
-          {{ range $value.Pages }}
-          <li>
-            <h3 class="content-title">
-              {{ if .IsNode }}
-              <a href="{{ .Permalink}}">{{.Title }}</a>
-              {{ else }}
-              <a href="{{ .RelPermalink }}">{{ .Title }}{{ if .Draft }} :: Draft {{end}}</a>
-            {{ end }}
-            </h3>
-          </li>
-          {{ end }}
-        </ul>
-      {{ end }} -->
   </article>
 </div>
+
+
+<section id="column" class="column">
+  <h2 class="underline">Newest</h2>
+  <ul>
+    {{ range first 5 .Site.RegularPages }}
+    <li>
+      <a href="{{ .RelPermalink }}">{{ .Title }}</a>
+    </li>
+    {{ end }}
+  </ul>
+</section>
+ 
+
+<!-- <section id="column" class="column">
+  <h2 class="underline">Last Modified</h2>
+  <ul>
+    {{ range first 5 .Site.RegularPages.ByLastmod }}
+    <li>
+      <a href="{{ .RelPermalink }}">{{ .Title }}</a>
+    </li>
+  {{ end }}
+  </ul>
+</section> -->
+
+
+<section id="column" class="column">
+  {{ range .Site.RegularPages.GroupBy "Section" "asc" }}
+  <h2 class="underline">{{ .Key }}</h2>
+  <ul>
+    {{ range .Pages.ByPublishDate }}
+    <li>
+        <a href="{{ .RelPermalink }}">{{ .Title }}</a>
+    </li>
+    {{ end }}
+  </ul>
+{{ end }}
+</section>
+
 {{ end }}
