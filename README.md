@@ -11,7 +11,7 @@ attempts to be a faithful implementation of the
 It supports mathematical typesetting via [katex](https://katex.org/) or [MathJax](https://www.mathjax.org).
 By utilizing copious partial templates the theme is largely customizable.
 
-This is a fork of the original [hugo-tufte](https://slashformotion.github.io/hugo-tufte/). 
+This is a fork of the original [hugo-tufte](https://github.com/slashformotion/hugo-tufte). 
 
 ## Quickstart
 
