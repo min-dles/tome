@@ -2,7 +2,6 @@
 author : "AUTHOR NAME"
 date : "2016-02-20T13:56:01-08:00"
 meta : true
-math : true
 title : "Hugo-Tufte Features"
 subtitle : "Fancy Subtitle"
 toc : true
