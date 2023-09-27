@@ -1,4 +1,6 @@
 [module]
-    [module.hugoVersion]
-    extended = true
-    min = "0.83.0"
+[imports]
+path = "tome"
+[module.hugoVersion]
+extended = true
+min = "0.83.0"

@@ -1,15 +1,14 @@
-+++
-author = "AUTHOR NAME"
-date = "2016-02-20T13:56:01-08:00"
-meta = true
-math = true
-title = "Hugo-Tufte Features"
-subtitle = "Fancy Subtitle"
-toc = true
-categories = ["katex", "latex", "tufte-css"]
-
-
-+++
+---
+author : "AUTHOR NAME"
+date : "2016-02-20T13:56:01-08:00"
+meta : true
+math : true
+title : "Hugo-Tufte Features"
+subtitle : "Fancy Subtitle"
+toc : true
+categories : ["katex", "latex", "tufte-css"]
+math: true
+---
 
 This is a quick demonstration post.  It serves as an example of the features
 of this theme.  One of them is $ \LaTeX $ via [Katex](https://katex.org/). 

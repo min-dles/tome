@@ -1,10 +1,9 @@
-+++
-author = "Hiro Protagonist"
-date = "2015-01-19T23:57:58-08:00"
-hasMath = false
-title = "Blockquotes"
+---
+date : "2015-01-19T23:57:58-08:00"
+math : false
+title : "Blockquotes"
 
-+++
+---
 
 Below is a blockquote.
 
