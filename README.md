@@ -35,6 +35,21 @@ You'll need to install Hugo Extended for this theme to test it locally, since th
     choco install hugo-extended # remember, you might need admin privs
     ```
 
+### Check out the example site
+
+```shell
+git clone https://github.com/loikein/hugo-tufte.git
+cd hugo-tufte/exampleSite
+hugo server --buildDrafts --disableFastRender
+```
+
+Then open `localhost:1313` or wherever it says in browser.
+
+The showcase posts are:
+
+- `The big old test page`
+- `Tufte CSS`
+
 ### For a new site
 
 ```bash
