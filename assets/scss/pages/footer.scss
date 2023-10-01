@@ -13,9 +13,9 @@ footer.page-footer p {
     /*font-weight: lighter;*/
 }
 footer.page-footer a {
-    color: rgba(65, 70, 75, 1);
+    color: var(--navigation);
     text-decoration: none;
-    background: transparent;
+    // background: transparent;
 }
 footer.page-footer hr {
     text-align: left;
