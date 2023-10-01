@@ -51,10 +51,6 @@ footer,
         "Open Sans", "Helvetica Neue", "Lucida Grand", sans-serif;
 }
 
-p {
-    text-align: justify;
-}
-
 code {
     font-family: "Fira Code", Consolas, "Liberation Mono", Menlo, Courier, monospace;
     font-size: 1.125rem;
@@ -80,7 +76,7 @@ h1.content-title {
 
 h1.content-title a:link,
 h1.content-title a:visited {
-    background: transparent;
+    // background: transparent;
     text-decoration: none;
     color: inherit;
 }
@@ -144,4 +140,35 @@ table.lntable {
 
     border-spacing: 0;
     padding: 0;
+}
+
+
+#TableOfContents {
+    // background-color: var(--text);
+    // color: var(--background);
+    // border: 2px solid var(--text);
+    // list-style-position: inside;
+    // position: fixed;
+    // left: 3em;
+    // width: 190px;
+    // text-shadow: none;
+}
+
+.question {
+    background-color: blue;
+}
+
+.answer {
+    background-color: rebeccapurple;
+    direction: rtl;
+    .icon {
+        direction: rtl;
+        margin-left: auto;
+    }
+}
+
+.icon {
+    width: 48px;
+    height: 48px;
+    outline: 2px solid orange;
 }
