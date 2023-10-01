@@ -1,0 +1,20 @@
+{{ $variant := .Get 0 }}
+{{ if eq $variant "question" }}
+<div class="dialog question">
+  {{ else if eq $variant "answer" }}
+  <div class="dialog answer">
+    {{ end }}
+    <div class="icon">
+      <i>
+        {{ if eq $variant "question" }}
+        question icon here
+        {{ else if eq $variant "answer" }}
+        answer icon here
+        {{ end }}
+      </i>
+    </div>
+    <p>
+      {{ .Inner }}
+    </p>
+  </div>
+</div>
