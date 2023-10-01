@@ -54,14 +54,38 @@ html {
     font-size: 15px;
 }
 
+:root {
+    $dark: #1d2021;
+    $light: #bdae93;
+    $meta: #9b8f79;
+    $navigation: #a8a8ab;
+    // color-scheme
+    --dark: #{$dark};
+    --light: #{$light};
+
+    // Original colors
+    // --h1: rgba(65, 70, 75, 1);
+    // --h2: rgba(100, 105, 110, 1);
+
+    --meta: #{$meta};
+    --navigation: #{$navigation};
+
+    // light mode
+    // --background: var(--light);
+    // --text: var(--dark);
+    // dark mode
+    --background: var(--dark);
+    --text: var(--light);
+}
+
 body {
     width: 87.5%;
     margin-left: auto;
     margin-right: auto;
     padding-left: 12.5%;
     font-family: et-book, Palatino, "Palatino Linotype", "Palatino LT STD", "Book Antiqua", Georgia, serif;
-    background-color: #1d2021;
-    color: #bdae93;
+    background-color: var(--background);
+    color: var(--text);
     max-width: 1400px;
     counter-reset: sidenote-counter;
 }
@@ -133,6 +157,10 @@ p {
     vertical-align: baseline;
 }
 
+blockquote .sidenote {
+    margin-right: -80%;
+}
+
 /* Chapter Epigraphs */
 div.epigraph {
     margin: 5em 0;
@@ -164,6 +192,23 @@ blockquote {
 
 blockquote p {
     width: 50%;
+    border: calc(1em / 8) solid var(--text);
+    padding: 1em 1.5em;
+    color: var(--text);
+    position: relative;
+    line-height: 1.75em;
+
+    &:after {
+        position: absolute;
+        content: "";
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: var(--text);
+        opacity: 0.2;
+        z-index: -1;
+    }
 }
 
 blockquote footer {
@@ -224,16 +269,16 @@ a:visited {
 
 a:link {
     text-decoration: none;
-    background: -webkit-linear-gradient(#1d2021, #1d2021), -webkit-linear-gradient(#1d2021, #1d2021),
-        -webkit-linear-gradient(#1d2021, #1d2021);
-    background: linear-gradient(#1d2021, #1d2021), linear-gradient(#1d2021, #1d2021), linear-gradient(#1d2021, #1d2021);
+    // background: -webkit-linear-gradient(#1d2021, #1d2021), -webkit-linear-gradient(#1d2021, #1d2021),
+    //     -webkit-linear-gradient(#1d2021, #1d2021);
+    // background: linear-gradient(#1d2021, #1d2021), linear-gradient(#1d2021, #1d2021), linear-gradient(#1d2021, #1d2021);
     -webkit-background-size: 0.05em 1px, 0.05em 1px, 1px 1px;
     -moz-background-size: 0.05em 1px, 0.05em 1px, 1px 1px;
     background-size: 0.05em 1px, 0.05em 1px, 1px 1px;
     background-repeat: no-repeat, no-repeat, repeat-x;
-    text-shadow: 0.03em 0 #1d2021, -0.03em 0 #1d2021, 0 0.03em #1d2021, 0 -0.03em #1d2021, 0.06em 0 #1d2021,
-        -0.06em 0 #1d2021, 0.09em 0 #1d2021, -0.09em 0 #1d2021, 0.12em 0 #1d2021, -0.12em 0 #1d2021, 0.15em 0 #1d2021,
-        -0.15em 0 #1d2021;
+    // text-shadow: 0.03em 0 #1d2021, -0.03em 0 #1d2021, 0 0.03em #1d2021, 0 -0.03em #1d2021, 0.06em 0 #1d2021,
+    // -0.06em 0 #1d2021, 0.09em 0 #1d2021, -0.09em 0 #1d2021, 0.12em 0 #1d2021, -0.12em 0 #1d2021, 0.15em 0 #1d2021,
+    // -0.15em 0 #1d2021;
     background-position: 0% 93%, 100% 93%, 0% 93%;
 }
 
