@@ -55,18 +55,21 @@ html {
 }
 
 :root {
+    $dark: #1d2021;
+    $light: #bdae93;
+    $meta: #9b8f79;
+    $navigation: #a8a8ab;
     // color-scheme
-    --dark: #1d2021;
-    --light: #bdae93;
-    
-    
-    --h1: rgba(65, 70, 75, 1);
-    --h2: rgba(100, 105, 110, 1);
+    --dark: #{$dark};
+    --light: #{$light};
 
-    --meta: yellow;
-    --navigation: #BADA55;
-    
-    // --light: #fff;
+    // Original colors
+    // --h1: rgba(65, 70, 75, 1);
+    // --h2: rgba(100, 105, 110, 1);
+
+    --meta: #{$meta};
+    --navigation: #{$navigation};
+
     // light mode
     // --background: var(--light);
     // --text: var(--dark);
@@ -152,7 +155,6 @@ p {
     margin-bottom: 1.4rem;
     padding-right: 0;
     vertical-align: baseline;
-    outline: 2px solid red;
 }
 
 blockquote .sidenote {
@@ -193,12 +195,9 @@ blockquote p {
     border: calc(1em / 8) solid var(--text);
     padding: 1em 1.5em;
     color: var(--text);
-    // color: var(--background);
-    // background: var(--text);
     position: relative;
     line-height: 1.75em;
 
-    // font-size: 110%;
     &:after {
         position: absolute;
         content: "";
@@ -208,7 +207,6 @@ blockquote p {
         height: 100%;
         background-color: var(--text);
         opacity: 0.2;
-        // opacity: 0.75;
         z-index: -1;
     }
 }
@@ -279,8 +277,8 @@ a:link {
     background-size: 0.05em 1px, 0.05em 1px, 1px 1px;
     background-repeat: no-repeat, no-repeat, repeat-x;
     // text-shadow: 0.03em 0 #1d2021, -0.03em 0 #1d2021, 0 0.03em #1d2021, 0 -0.03em #1d2021, 0.06em 0 #1d2021,
-        // -0.06em 0 #1d2021, 0.09em 0 #1d2021, -0.09em 0 #1d2021, 0.12em 0 #1d2021, -0.12em 0 #1d2021, 0.15em 0 #1d2021,
-        // -0.15em 0 #1d2021;
+    // -0.06em 0 #1d2021, 0.09em 0 #1d2021, -0.09em 0 #1d2021, 0.12em 0 #1d2021, -0.12em 0 #1d2021, 0.15em 0 #1d2021,
+    // -0.15em 0 #1d2021;
     background-position: 0% 93%, 100% 93%, 0% 93%;
 }
 
