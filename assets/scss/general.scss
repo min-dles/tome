@@ -154,6 +154,7 @@ table.lntable {
         margin: 0;
         left: 1em;
         width: 15%;
+        overflow-wrap: break-word;
     }
 
     li.active {
