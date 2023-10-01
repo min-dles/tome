@@ -4,7 +4,7 @@
 /* accomodate a blog-like site. */
 /* ------------------------------------------------------------------------ */
 
-@import url("https://fonts.googleapis.com/css2?family=Fira+Code:wght@351&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=FiraCode:wght@351&display=swap");
 
 :root {
     --sidenotes-max-width: 550px;
@@ -19,8 +19,8 @@
     --popups-local-transclude-popup-min-width: 360px;
     --popups-local-transclude-popup-min-height: 120px;
     --popups-popup-border-width: 3px;
-    --popups-popup-title-bar-height: calc(1.5rem + 1px);
-    --popups-popup-mini-title-bar-height: calc(1rem + 1px);
+    --popups-popup-title-bar-height: calc(1.5rem 1px);
+    --popups-popup-mini-title-bar-height: calc(1rem 1px);
     --popups-video-iframe-width: 495px;
     --popups-video-iframe-height: 310px;
     --popups-image-popup-min-size: 64px;
@@ -76,7 +76,6 @@ h1.content-title {
 
 h1.content-title a:link,
 h1.content-title a:visited {
-    // background: transparent;
     text-decoration: none;
     color: inherit;
 }
@@ -142,33 +141,54 @@ table.lntable {
     padding: 0;
 }
 
-
-#TableOfContents {
-    // background-color: var(--text);
-    // color: var(--background);
-    // border: 2px solid var(--text);
-    // list-style-position: inside;
-    // position: fixed;
-    // left: 3em;
-    // width: 190px;
-    // text-shadow: none;
+:target {
+    @media screen and (min-width: 761px) {
+        scroll-margin-top: 5rem;
+    }
 }
 
-.question {
-    background-color: blue;
+.section-nav {
+    @media screen and (min-width: 761px) {
+        position: fixed;
+        top: 1.5rem;
+        margin: 0;
+        left: 1em;
+        width: 15%;
+    }
+
+    li.active {
+        text-decoration: underline;
+    }
 }
+
+.dialog {
+    display: flex;
+    margin: 0.75rem 1.5rem;
+    gap: 1em;
+
+    p {
+        width: 50%;
+    }
+
+    &.answer {
+        flex-direction: row-reverse;
+    }
+}
+
 
 .answer {
-    background-color: rebeccapurple;
-    direction: rtl;
-    .icon {
-        direction: rtl;
-        margin-left: auto;
+
+    .sidenote,
+    .marginnote {
+        margin-left: -55%;
+        float: left;
+        clear: left;
+        margin-right: 0;
     }
 }
 
 .icon {
     width: 48px;
     height: 48px;
-    outline: 2px solid orange;
+    margin: 1.4rem 0;
 }
