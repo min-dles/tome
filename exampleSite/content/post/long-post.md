@@ -10,6 +10,9 @@ categories : ["katex", "latex", "tufte-css"]
 math: true
 ---
 
+{{<section>}}
+## Dialog
+
 {{<dialog "question">}}
 spongebob  ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Sagittis eu volutpat odio facilisis mauris. In nulla posuere sollicitudin aliquam ultrices sagittis. Ultrices eros in cursus turpis massa tincidunt dui ut ornare. {{<sidenote>}}Facilisi etiam dignissim diam quis enim lobortis scelerisque{{</sidenote>}}. Vivamus arcu felis bibendum ut tristique et. Pulvinar mattis nunc sed blandit. Id eu nisl nunc mi ipsum faucibus. Iaculis at erat pellentesque adipiscing commodo elit at. Ac tortor dignissim convallis aenean et. Volutpat ac tincidunt vitae semper quis lectus nulla at. Luctus accumsan tortor posuere ac.
 {{</dialog>}}
@@ -17,6 +20,8 @@ spongebob  ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tem
 {{<dialog "answer">}}
 patrick  ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Sagittis eu volutpat odio facilisis mauris. In nulla posuere sollicitudin aliquam ultrices sagittis. Ultrices eros in cursus turpis massa tincidunt dui ut ornare. {{<sidenote>}}Facilisi etiam dignissim diam quis enim lobortis scelerisque{{</sidenote>}}. Vivamus arcu felis bibendum ut tristique et. Pulvinar mattis nunc sed blandit. Id eu nisl nunc mi ipsum faucibus. Iaculis at erat pellentesque adipiscing commodo elit at. Ac tortor dignissim convallis aenean et. Volutpat ac tincidunt vitae semper quis lectus nulla at. Luctus accumsan tortor posuere ac.
 {{</dialog>}}
+
+{{<section "end">}}
 
 {{<section>}}
 
