@@ -30,7 +30,8 @@
 				"bungcip.better-toml",
 				"davidanson.vscode-markdownlint",
 				"budparr.language-hugo-vscode",
-				"GitHub.vscode-pull-request-github"
+				"GitHub.vscode-pull-request-github",
+				"eamodio.gitlens"
 			]
 		}
 	},
