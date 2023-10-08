@@ -1,5 +1,5 @@
 {{ $variant := .Get 0 }}
-{{ printf "Debug: Variant is %s" $variant }}
+{{/*  TESTING: {{ printf "Debug: Variant is %s" $variant }}  */}}
 
 {{ if eq $variant "question" }}
   <div class="dialog question">
