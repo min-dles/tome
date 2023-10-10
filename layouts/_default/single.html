@@ -9,8 +9,10 @@
   <article class="pure-u-1">
     {{ partial "brand.html" . }}
     {{ partial "content.header.html" . }}
-    {{ partial "toc.html" . }}
-    <section>{{ .Content }}</section>
+    <section class="toc-main-container">
+      {{ partial "toc.html" . }}
+      {{ .Content }}
+    </section>
     <section>
       {{ partial "footer.html" . }}
     </section>

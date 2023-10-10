@@ -49,50 +49,69 @@
 
 /* 1. Enable smooth scrolling */
 
-  
+
 /* 2. Make nav sticky */
-main > nav {
-position: -webkit-sticky;
-position: sticky;
-left: 50;
-top: 50;
-display: inline-block;
-align-self: start;
+main>nav {
+    position: -webkit-sticky;
+    position: sticky;
+    left: 50;
+    top: 50;
+    display: inline-block;
+    align-self: start;
+}
+
+// ToC appears sticky on larger screens and follows scrolling: 
+@media screen and (min-width: 761px) {
+    .toc-main-container {
+        width: 80%;
+    }
+
+    .toc-main-container>div.section-nav {
+        position: sticky;
+    }
+
+    .toc-main-container> :not(div.section-nav) {
+        // padding-left: 20%;
+        position: relative;
+        left: 20%;
+        top: -450px;
+    }
 }
 
 /* Sidebar Navigation */
 .section-nav {
-margin-top: 2rem;
-padding-left: 0;
+    margin-top: 2rem;
+    padding-left: 0;
 }
 
 .section-nav a {
-text-decoration: none;
-display: block;
-padding: .125rem 0;
-//color: #ccc;
-transition: all 50ms ease-in-out; /* 💡 This small transition makes setting of the active state smooth */
+    text-decoration: none;
+    display: block;
+    padding: .125rem 0;
+    //color: #ccc;
+    transition: all 50ms ease-in-out;
+    /* 💡 This small transition makes setting of the active state smooth */
 }
 
 .section-nav a:hover,
 .section-nav a:focus {
-color: #666;
+    color: #666;
 }
 
 /** Poor man's reset **/
 * {
-box-sizing: border-box;
+    box-sizing: border-box;
 }
 
 
 
 /** page layout **/
 main {
-display: grid;
-grid-template-columns: 1fr 15em;
-max-width: 100em;
-width: 100%;
-margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 15em;
+    max-width: 100em;
+    width: 100%;
+    margin: 0 auto;
 }
 
 /** enlarge the sections for this demo, so that we have a long scrollable page **/
