@@ -63,7 +63,6 @@ code {
     width: 55%;
 }
 
-
 /* ------------------------------------------------------------------------ */
 /* Generic content, such as the index list pages */
 /* ------------------------------------------------------------------------ */
@@ -72,6 +71,8 @@ code {
 h1.content-title {
     /*max-width: 50rem;*/
     font-size: 4rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
 }
 
 h1.content-title a:link,
@@ -147,13 +148,39 @@ table.lntable {
     }
 }
 
+// ------------------------------------------------------------------
+// long-post styling elements:
+// ------------------------------------------------------------------
+
+.pure-u-1 {
+    display: grid;
+    grid-template-columns: 12em 100%;
+    width: 80%;
+}
+
+.content-header-container {
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 2;
+}
+
+.main-content {
+    grid-column-start: 2;
+}
+
 .section-nav {
     @media screen and (min-width: 761px) {
-        position: fixed;
-        top: 1.5rem;
+        position: sticky;
+        top: 80px;
         margin: 0;
         left: 1em;
-        width: 20%;
+        width: 100%;
+        grid-column-start: 1;
+        grid-column-end: 2;
+        grid-row-start: 2;
+        grid-row-end: 4;
+        align-self: start;
+        // background-color: red;
         //overflow-wrap: break-word;
     }
 
@@ -196,4 +223,15 @@ table.lntable {
     width: 48px;
     height: 48px;
     margin: 1.4rem 0;
+}
+
+@media screen and (max-width: 760px) {
+    .pure-u-1 {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .section-nav {
+        display: none;
+    }
 }

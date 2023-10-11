@@ -80,8 +80,8 @@ main>nav {
 
 /* Sidebar Navigation */
 .section-nav {
-    margin-top: 2rem;
-    padding-left: 0;
+margin-top: 2rem; // to line up ToC with header h1
+padding-left: 0;
 }
 
 .section-nav a {
@@ -96,6 +96,11 @@ main>nav {
 .section-nav a:hover,
 .section-nav a:focus {
     color: #666;
+}
+
+// remove all margins on ToC listed content
+#TableOfContents ul {
+    margin: 0;
 }
 
 /** Poor man's reset **/
